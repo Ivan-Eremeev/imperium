@@ -12,27 +12,31 @@
     <div class="page">
       <!-- header-->
       <header class="header" id="header">
-        <div class="wrapper">
-          <div class="header_container">
-            <!-- menu-->
-            <div class="menu menu--right" id="menu">
-              <button class="menu_btn hamburger hamburger--vortex" id="menu-btn" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
-              <nav class="menu_nav" id="mmenu">
-                <ul class="menu_list">
-                  <li class="menu_item"><a class="menu_link" href="#">Меню 1</a></li>
-                  <li class="menu_item"><a class="menu_link" href="#">Меню 2</a></li>
-                  <li class="menu_item"><a class="menu_link" href="#">Меню 3</a></li>
-                  <li class="menu_item"><a class="menu_link" href="#">Меню 4</a></li>
-                  <li class="menu_item"><a class="menu_link" href="#">Меню 5</a></li>
-                  <li class="menu_item"><a class="menu_link" href="#">Меню 6</a></li>
-                  <li class="menu_item"><a class="menu_link" href="#">Меню 7</a></li>
-                  <li class="menu_item"><a class="menu_link" href="#">Меню 8</a></li>
-                </ul>
-              </nav>
-              <div class="menu_over"></div>
+        <div class="header_container"><a class="logo" href="index.html"><img src="img/logo.png" alt="logo"></a>
+          <!-- menu-->
+          <div class="menu menu--right" id="menu">
+            <button class="menu_btn hamburger hamburger--vortex" id="menu-btn" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+            <nav class="menu_nav">
+              <ul class="menu_list">
+                <li class="menu_item mobile-visible"><a class="logo" href="index.html"><img src="img/logo.png" alt="logo"></a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Главная</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Услуги</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Цены</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Акция</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Галерея</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Сотрудники</a></li>
+                <li class="menu_item"><a class="menu_link" href="#">Онлайн-запись</a></li>
+              </ul>
+            </nav>
+            <div class="menu_over"></div>
+            <div class="contacts mobile-hide">
+              <div class="contacts_line contacts_line--top"><a class="contacts_tel" href="tel:+79688088804">+7 (968) 808-88-04</a><a class="contacts_icon" href="#"><img src="img/vk-icon.png" alt="vk"></a></div>
+              <div class="contacts_line">
+                <div class="contacts_adress">ул. Земляной Вал, д. 38/40, корп. 6</div><a class="contacts_icon" href="#"><img src="img/insta-icon.png" alt="instagramm"></a>
+              </div>
             </div>
-            <!-- /menu-->
           </div>
+          <!-- /menu-->
         </div>
       </header>
       <!-- /header-->
@@ -114,13 +118,13 @@
               <li>tab 3</li>
             </ul>
             <div class="tabs_content">
-              <div>
+              <div class="tabs_block">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda quod fugit, eos dolorem ut ex inventore facere non sit. Dolorum, eveniet, adipisci! Aperiam soluta, harum obcaecati earum optio libero reprehenderit, fuga. Libero odio eaque deserunt recusandae, maxime quaerat autem! Eligendi inventore laudantium odit magni nihil eos soluta quisquam, unde.</p>
               </div>
-              <div class="hide">
+              <div class="tabs_block hide">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda quod fugit, eos dolorem ut ex inventore facere non sit.</p>
               </div>
-              <div class="hide">
+              <div class="tabs_block hide">
                 <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt assumenda quod fugit, eos dolorem ut ex inventore facere non sit. Dolorum, eveniet, adipisci! Aperiam soluta, harum obcaecati earum optio libero reprehenderit, fuga. Libero odio eaque deserunt recusandae, maxime quaerat autem! Eligendi inventore laudantium odit magni nihil eos soluta quisquam, unde. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus officia, aliquam, nemo est unde nesciunt ipsam iure numquam natus error!</p>
               </div>
             </div>
@@ -209,15 +213,12 @@
       <!-- footer-->
       <footer class="footer"> 
         <div class="wrapper"> 
-          <div class="licence">Футер</div>
+          <div class="licence"></div>
         </div>
       </footer>
       <!-- /footer-->
     </div>
     <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/jquery.tinyscrollbar.min.js"></script>
-    <script src="js/tooltipster.bundle.min.js"></script>
-    <script src="js/wow.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

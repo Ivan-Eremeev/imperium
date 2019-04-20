@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <title>Главная</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+  <body>
+    <!-- header-->
+    <header class="header" id="header">
+      <div class="header_container"><a class="logo" href="index.html"><img src="img/logo.png" alt="logo"></a>
+        <!-- menu-->
+        <div class="menu menu--right" id="menu">
+          <button class="menu_btn hamburger hamburger--vortex" id="menu-btn" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
+          <nav class="menu_nav">
+            <ul class="menu_list">
+              <li class="menu_item mobile-visible"><a class="logo" href="index.html"><img src="img/logo.png" alt="logo"></a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Главная</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Услуги</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Цены</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Акция</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Галерея</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Сотрудники</a></li>
+              <li class="menu_item"><a class="menu_link" href="#">Онлайн-запись</a></li>
+            </ul>
+          </nav>
+          <div class="menu_over"></div>
+          <div class="contacts mobile-hide">
+            <div class="contacts_line contacts_line--top"><a class="contacts_tel" href="tel:+79688088804">+7 (968) 808-88-04</a><a class="contacts_icon" href="#"><img src="img/vk-icon.png" alt="vk"></a></div>
+            <div class="contacts_line">
+              <div class="contacts_adress">ул. Земляной Вал, д. 38/40, корп. 6</div><a class="contacts_icon" href="#"><img src="img/insta-icon.png" alt="instagramm"></a>
+            </div>
+          </div>
+        </div>
+        <!-- /menu-->
+      </div>
+    </header>
+    <!-- /header-->
+    <!-- first-screen-->
+    <section class="first-screen">
+      <div class="first-screen_content">
+        <h1 class="first-screen_title">лазерная эпиляция </h1>
+        <div class="first-screen_text">от 400 рублей <br>с гарантией результата!</div>
+        <div class="first-screen_btn"><a class="first-screen_link" href="#">Выбрать ЗОНУ УДАЛЕНИЯ ВОЛОС!</a></div>
+      </div>
+      <div class="first-screen_img" data-animate-wrap><img class="first-screen_woomen" src="img/woomen-first.png" alt="woomen" data-animate-x="0.1"><img class="first-screen_circle-1" src="img/circle-1.png" alt="circle" data-animate-x="0.05"><img class="first-screen_circle-2" src="img/circle-2.png" alt="circle" data-animate-x="0.05">
+        <div class="first-screen_subtext first-screen_subtext--1" data-animate-xy="1">Работаем с любыми <br>типами кожи</div>
+        <div class="first-screen_subtext first-screen_subtext--2" data-animate-xy="1">БЕЗБОЛЕЗНЕННО <br>И АККУРАТНО</div>
+        <div class="first-screen_subtext first-screen_subtext--3" data-animate-xy="1">На лучшем аппарате <br>в стране</div>
+      </div>
+      <div class="arrow-next"><img src="img/arrow-next.png" alt="arrow"></div>
+    </section>
+    <!-- /first-screen-->
+    <!-- select-zone-->
+    <section class="select-zone">
+      <h2 class="title-section">Выбери зону</h2>
+      <div class="select-zone_tabs tabs">
+        <ul class="select-zone_trigger tabs_trigger">
+          <li class="select-zone_item select-zone_item--1 active"></li>
+          <li class="select-zone_item select-zone_item--2"></li>
+          <li class="select-zone_item select-zone_item--3"></li>
+        </ul>
+        <div class="select-zone_content tabs_content">
+          <div class="select-zone_block tabs_block">
+            <div class="select-zone_img select-zone_img--1"><img src="img/woomen-face.png" alt="woomen"></div>
+            <div class="select-zone_title">EPILATION</div>
+            <div class="select-zone_slider">
+              <div class="select-zone_arrow select-zone_arrow--prev"><img src="img/white-arrow.png" alt="arrow"></div>
+              <div class="slider-zone" id="slider-zone-1">
+                <div class="slider-zone_slide">
+                  <ul class="slider-zone_list">
+                    <li class="slider-zone_item" data-zone="1">Подбородок <span>1.600</span></li>
+                    <li class="slider-zone_item" data-zone="2">Бакенбарды <span>900</span></li>
+                    <li class="slider-zone_item" data-zone="3">Щеки <span>1.400</span></li>
+                    <li class="slider-zone_item" data-zone="4">Нос <span>1.300</span></li>
+                    <li class="slider-zone_item" data-zone="5">Верхняя губа <span>1.500</span></li>
+                  </ul>
+                </div>
+                <div class="slider-zone_slide">
+                  <ul class="slider-zone_list">
+                    <li class="slider-zone_item" data-zone="all">Лицо полностью <span>3.700</span></li>
+                    <li class="slider-zone_item" data-zone="6">Лоб <span>1.200</span></li>
+                    <li class="slider-zone_item" data-zone="7">Уши <span>850</span></li>
+                    <li class="slider-zone_item" data-zone="8">Виски <span>1.000</span></li>
+                    <li class="slider-zone_item" data-zone="9">Брови/Межбровье <span>1.500</span></li>
+                  </ul>
+                </div>
+                <div class="slider-zone_slide">
+                  <ul class="slider-zone_list">
+                    <li class="slider-zone_item">Лицо полностью <span>3.700</span></li>
+                    <li class="slider-zone_item">Лоб <span>1.200</span></li>
+                    <li class="slider-zone_item">Уши <span>850</span></li>
+                    <li class="slider-zone_item">Виски <span>1.000</span></li>
+                    <li class="slider-zone_item">Брови/Межбровье <span>1.500</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select-zone_arrow select-zone_arrow--next"><img src="img/white-arrow.png" alt="arrow"></div>
+            </div>
+            <div class="select-zone_offer"><a class="select-zone_btn" href="#">ЗАПИСАТЬСЯ</a>
+              <div class="select-zone_sale">со СКИДКОЙ 30%</div>
+            </div>
+            <div class="zone-face">
+              <div class="zone-face_img zone-face_img--1 active"><img src="img/chin.png" alt="chin"></div>
+              <div class="zone-face_img zone-face_img--2"><img src="img/whisker.png" alt="whisker"></div>
+              <div class="zone-face_img zone-face_img--3"><img src="img/jowls.png" alt="jowls"></div>
+              <div class="zone-face_img zone-face_img--4"><img src="img/nose.png" alt="nose"></div>
+              <div class="zone-face_img zone-face_img--5"><img src="img/moustache.png" alt="moustache"></div>
+              <div class="zone-face_img zone-face_img--6"><img src="img/forehead.png" alt="forehead"></div>
+              <div class="zone-face_img zone-face_img--7"><img src="img/ears.png" alt="ears"></div>
+            </div>
+          </div>
+          <div class="select-zone_block tabs_block hide">
+            <div class="select-zone_img select-zone_img--2"><img src="img/woomen-body.png" alt="woomen"></div>
+            <div class="select-zone_title">EPILATION</div>
+            <div class="select-zone_slider">
+              <div class="select-zone_arrow select-zone_arrow--prev"><img src="img/white-arrow.png" alt="arrow"></div>
+              <div class="slider-zone" id="slider-zone-2">
+                <div class="slider-zone_slide">
+                  <ul class="slider-zone_list">
+                    <li class="slider-zone_item">Подбородок<span>1.600</span></li>
+                    <li class="slider-zone_item">Бакенбарды <span>900</span></li>
+                    <li class="slider-zone_item">Щеки <span>1.400</span></li>
+                    <li class="slider-zone_item">Нос <span>1.300</span></li>
+                    <li class="slider-zone_item">Верхняя губа <span>1.500</span></li>
+                    <li class="slider-zone_item">Подбородок<span>1.600</span></li>
+                    <li class="slider-zone_item">Бакенбарды <span>900</span></li>
+                    <li class="slider-zone_item">Щеки <span>1.400</span></li>
+                    <li class="slider-zone_item">Нос <span>1.300</span></li>
+                    <li class="slider-zone_item">Верхняя губа </li>
+                  </ul>
+                </div>
+                <div class="slider-zone_slide">
+                  <ul class="slider-zone_list">
+                    <li class="slider-zone_item">Лицо полностью <span>3.700</span></li>
+                    <li class="slider-zone_item">Лоб <span>1.200</span></li>
+                    <li class="slider-zone_item">Уши <span>850</span></li>
+                    <li class="slider-zone_item">Виски <span>1.000</span></li>
+                    <li class="slider-zone_item">Брови/Межбровье <span>1.500</span></li>
+                  </ul>
+                </div>
+                <div class="slider-zone_slide">
+                  <ul class="slider-zone_list">
+                    <li class="slider-zone_item">Лицо полностью <span>3.700</span></li>
+                    <li class="slider-zone_item">Лоб <span>1.200</span></li>
+                    <li class="slider-zone_item">Уши <span>850</span></li>
+                    <li class="slider-zone_item">Виски <span>1.000</span></li>
+                    <li class="slider-zone_item">Брови/Межбровье <span>1.500</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select-zone_arrow select-zone_arrow--next"><img src="img/white-arrow.png" alt="arrow"></div>
+            </div>
+            <div class="select-zone_offer"><a class="select-zone_btn" href="#">ЗАПИСАТЬСЯ</a>
+              <div class="select-zone_sale">со СКИДКОЙ 30%</div>
+            </div>
+          </div>
+          <div class="select-zone_block select-zone_block--men tabs_block hide">
+            <div class="select-zone_img select-zone_img--3"><img src="img/men-apilation.png" alt="men"></div>
+            <div class="select-zone_title">EPILATION</div>
+            <div class="select-zone_slider">
+              <div class="select-zone_arrow select-zone_arrow--prev"><img src="img/white-arrow.png" alt="arrow"></div>
+              <div class="slider-zone" id="slider-zone-3">
+                <div class="slider-zone_slide">
+                  <ul class="slider-zone_list">
+                    <li class="slider-zone_item">Подбородок<span>1.600</span></li>
+                    <li class="slider-zone_item">Бакенбарды <span>900</span></li>
+                    <li class="slider-zone_item">Щеки <span>1.400</span></li>
+                    <li class="slider-zone_item">Нос <span>1.300</span></li>
+                    <li class="slider-zone_item">Верхняя губа <span>1.500</span></li>
+                    <li class="slider-zone_item">Подбородок<span>1.600</span></li>
+                    <li class="slider-zone_item">Бакенбарды <span>900</span></li>
+                    <li class="slider-zone_item">Щеки <span>1.400</span></li>
+                    <li class="slider-zone_item">Нос <span>1.300</span></li>
+                    <li class="slider-zone_item">Верхняя губа <span>1.500</span></li>
+                  </ul>
+                </div>
+                <div class="slider-zone_slide">
+                  <ul class="slider-zone_list">
+                    <li class="slider-zone_item">Лицо полностью <span>3.700</span></li>
+                    <li class="slider-zone_item">Лоб <span>1.200</span></li>
+                    <li class="slider-zone_item">Уши <span>850</span></li>
+                    <li class="slider-zone_item">Виски <span>1.000</span></li>
+                    <li class="slider-zone_item">Брови/Межбровье <span>1.500</span></li>
+                    <li class="slider-zone_item">Подбородок<span>1.600</span></li>
+                    <li class="slider-zone_item">Бакенбарды <span>900</span></li>
+                    <li class="slider-zone_item">Щеки <span>1.400</span></li>
+                    <li class="slider-zone_item">Нос <span>1.300</span></li>
+                    <li class="slider-zone_item">Верхняя губа <span>1.500</span></li>
+                  </ul>
+                </div>
+                <div class="slider-zone_slide">
+                  <ul class="slider-zone_list">
+                    <li class="slider-zone_item">Лицо полностью <span>3.700</span></li>
+                    <li class="slider-zone_item">Лоб <span>1.200</span></li>
+                    <li class="slider-zone_item">Уши <span>850</span></li>
+                    <li class="slider-zone_item">Виски <span>1.000</span></li>
+                    <li class="slider-zone_item">Брови/Межбровье <span>1.500</span></li>
+                    <li class="slider-zone_item">Подбородок<span>1.600</span></li>
+                    <li class="slider-zone_item">Бакенбарды <span>900</span></li>
+                    <li class="slider-zone_item">Щеки <span>1.400</span></li>
+                    <li class="slider-zone_item">Нос <span>1.300</span></li>
+                    <li class="slider-zone_item">Верхняя губа <span>1.500</span></li>
+                  </ul>
+                </div>
+              </div>
+              <div class="select-zone_arrow select-zone_arrow--next"><img src="img/white-arrow.png" alt="arrow"></div>
+            </div>
+            <div class="select-zone_offer"><a class="select-zone_btn select-zone_btn--men" href="#">ЗАПИСАТЬСЯ</a>
+              <div class="select-zone_sale">со СКИДКОЙ 30%</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /select-zone-->
+    <!-- advantages-->
+    <section class="advantages">
+      <div class="advantages_box">
+        <div class="advantages_block">
+          <div class="advantages_img"><img src="img/advantages.png" alt="image"></div>
+          <h2 class="advantages_text">ЧТО <br>ВАС <br>ЖДЕТ В <br>IMPERIUMCLINIC?</h2>
+        </div>
+        <ul class="advantages_list">
+          <li class="advantages_item">Дополнительные услуги</li>
+          <li class="advantages_item">Низкие цены</li>
+          <li class="advantages_item">Удобное месторасположение <span>(м.Чкаловская/м.Курская)</span></li>
+          <li class="advantages_item">Новейшее оборудование</li>
+          <li class="advantages_item">Отличный сервис</li>
+        </ul>
+      </div>
+      <div class="operating-time">
+        <div class="operating-time_img"><img src="img/flower.png" alt="flower"></div>
+        <ul class="operating-time_list">
+          <li class="operating-time_item">10-15 мин<span>обработка одной зоны</span></li>
+          <li class="operating-time_item">30-40 % <span>волос удалятся после первого сеанса</span></li>
+          <li class="operating-time_item">5-7<span>сеансов для полного удаления волос</span></li>
+        </ul>
+      </div>
+    </section>
+    <!-- /advantages-->
+    <!-- set-->
+    <section class="set">
+      <h2 class="title-section"><span>КОМБО </span>НАБОР</h2>
+      <div class="set_sale">выгода 30%</div>
+      <div class="set_row">
+        <div class="set_col">
+          <div class="set_block">
+            <div class="set_subtitle">НАБОР №1</div>
+            <div class="set_line"></div>
+            <div class="set_text">ЭПИЛЯЦИЯ<span class="set_bold-big">2-x</span><span class="set_bold-small">ЛЮБЫХ </span>зон </div>
+            <div class="set_bottom-block">
+              <div class="set_price">4.490 Р</div><a class="set_btn" href="#">ЗАПИСАТЬСЯ</a>
+            </div>
+          </div>
+        </div>
+        <div class="set_col">
+          <div class="set_block">
+            <div class="set_subtitle">НАБОР №2</div>
+            <div class="set_line"></div>
+            <div class="set_text">ЭПИЛЯЦИЯ<span class="set_bold-big">3-х </span><span class="set_bold-small">ЛЮБЫХ </span>зон</div>
+            <div class="set_bottom-block">
+              <div class="set_price">6.490 Р</div><a class="set_btn" href="#">ЗАПИСАТЬСЯ</a>
+            </div>
+            <div class="set_like"></div>
+          </div>
+        </div>
+        <div class="set_col">
+          <div class="set_block">
+            <div class="set_subtitle">НАБОР №3</div>
+            <div class="set_line"></div>
+            <div class="set_text">ЭПИЛЯЦИЯ<span class="set_bold-big">4-х </span><span class="set_bold-small">ЛЮБЫХ </span>зон</div>
+            <div class="set_bottom-block">
+              <div class="set_subprice set_subprice--blue">+1 ЗОНА  = 1.000 руб</div>
+              <div class="set_price">7.490 Р</div><a class="set_btn" href="#">ЗАПИСАТЬСЯ</a>
+            </div>
+          </div>
+        </div>
+        <div class="set_col">
+          <div class="set_block">
+            <div class="set_subtitle set_subtitle--bold">ВСЕ ТЕЛО</div>
+            <ul class="set_list">
+              <li class="set_item">Ноги</li>
+              <li class="set_item">Руки </li>
+              <li class="set_item">Глубокое бикини</li>
+              <li class="set_item">Подмышки</li>
+              <li class="set_item">Живот</li>
+              <li class="set_item">Поясница</li>
+              <li class="set_item">Верхняя губа</li>
+            </ul>
+            <div class="set_bottom-block">
+              <div class="set_subprice">16.490 Р</div>
+              <div class="set_price">12.000 Р</div><a class="set_btn" href="#">ЗАПИСАТЬСЯ</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /set-->
+    <!-- prize-->
+    <section class="prize">
+      <div class="prize_block">
+        <div class="prize_content">
+          <h2 class="prize_title">ЗАПИСЫВАЙСЯ НА ЭПИЛЯЦИЮ ЛЮБОЙ ЗОНЫ СО СКИДКОЙ </h2>
+          <div class="prize_sale">30%</div>
+        </div>
+        <div class="prize_btn"><a class="prize_link" href="#">ЗАПИСАТЬСЯ</a></div>
+      </div>
+    </section>
+    <!-- /prize-->
+    <!-- workers-->
+    <section class="workers">
+      <div class="title-section">Наши сотрудники</div>
+      <div class="workers_branch"><img src="img/branch.png" alt="branch"></div>
+      <div class="workers_slider">
+        <div class="workers_slider-container">
+          <div class="slider-workers_btn slider-workers_btn--prev"> <span>&larr;</span></div>
+          <div class="slider-workers">
+            <div class="slider-workers_slide">
+              <div class="slider-workers_block">
+                <div class="slider-workers_img"><img src="img/worker-1.jpg" alt="image"></div>
+                <div class="slider-workers_content">
+                  <div class="slider-workers_description"><span>Мастер-лазерной эпиляции </span>Стаж работы более 3 лет.</div>
+                  <div class="slider-workers_name">Лоргунова Любовь Константиновна</div>
+                  <p class="slider-workers_text">Закончила интернатурe по дерматовенерологии <br>в Первом московском государственном медицинском университете им. И.М.Сеченова , повышение квалификации по косметологии на сертификат врача косметолога</p>
+                  <p class="slider-workers_text">Повышение квалификации на базе Моники им М.Владимирского по специальности врач-косметолог.</p>
+                  <div class="slider-workers_sertificates"><img src="img/sertificate-1.jpg" alt="sertificate"><img src="img/sertificate-2.jpg" alt="sertificate"></div>
+                  <div class="slider-workers_emblem"><img src="img/emblem.png" alt="emblem"></div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-workers_slide">
+              <div class="slider-workers_block">
+                <div class="slider-workers_img"><img src="img/worker-1.jpg" alt="image"></div>
+                <div class="slider-workers_content">
+                  <div class="slider-workers_description"><span>Мастер-лазерной эпиляции </span>Стаж работы более 3 лет.</div>
+                  <div class="slider-workers_name">Лоргунова Любовь Константиновна</div>
+                  <p class="slider-workers_text">Закончила интернатурe по дерматовенерологии <br>в Первом московском государственном медицинском университете им. И.М.Сеченова , повышение квалификации по косметологии на сертификат врача косметолога</p>
+                  <p class="slider-workers_text">Повышение квалификации на базе Моники им М.Владимирского по специальности врач-косметолог.</p>
+                  <div class="slider-workers_sertificates"><img src="img/sertificate-1.jpg" alt="sertificate"><img src="img/sertificate-2.jpg" alt="sertificate"></div>
+                  <div class="slider-workers_emblem"><img src="img/emblem.png" alt="emblem"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="slider-workers_btn slider-workers_btn--next"><span>&rarr;</span></div>
+        </div>
+      </div>
+    </section>
+    <!-- /workers-->
+    <!-- footer-->
+    <footer class="footer"> 
+      <div class="wrapper"> 
+        <div class="licence"></div>
+      </div>
+    </footer>
+    <!-- /footer-->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/twinmax.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -1,23 +1,28 @@
 .menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;;
 	&_nav {
 		
 	}
 	&_list {
-		text-align: center;
+		display: flex;
 	}
 	&_item {
-		display: inline-block;
-		vertical-align: middle;
+
 	}
 	&_link {
 		display: block;
-		padding: 10px 0;
-		margin: 0 10px;
+		padding: 0.5em 0;
+		margin: 0 0.35em;
+		font-size: 0.93em;
+		text-transform: uppercase;
 		text-decoration: none;
-		color: #fff;
-		@include line-fade();
+		font-weight: bold;
+		color: $black;
+		transition: .1s;
 		&:hover {
-			color: #ccc;
+			color: $blue;
 			border-color: #ccc;
 		}
 	}
@@ -162,15 +167,21 @@
 			}
 		}
 		&_nav {
-			width: 80%;
-			background-color: #666;
+			display: flex;
+			justify-content: center;
+			width: 100%;
+			padding-top: 1em;
+			background-color: #fff;
 			z-index: 99;
 			overflow: hidden;
 		}
+		&_list {
+			display: block;
+			text-align: center;
+		}
 		&_item {
 			display: block;
-			padding: 0 5px;
-			border-bottom: 1px solid #ccc;
+			padding: 0 0.3em;
 			// &:nth-child(1) {
 				
 			// }
@@ -222,7 +233,8 @@
 		}
 		&_link {
 			border: none;
-			margin: 0;
+			margin: 0.5em 0;
+			padding: 0.7em 0;
 		}
 		&_over {
 			display: none;
@@ -239,10 +251,9 @@
 	display: none;
 	user-select: none;
 	position: relative;
-	z-index: 99;
+	z-index: 101;
 	@media (max-width:$break_sm) {
 		display: block;
-		margin-left: auto;
 	}
 }
 @keyframes menuLinkLeft {

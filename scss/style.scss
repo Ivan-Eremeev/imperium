@@ -7,7 +7,7 @@
 
 // Переменные для кастомизации Mixingrid
 $columns: 12; // Колличество колонок
-$max-width: 1200px; // Максимальная ширина контейнера
+$max-width: 1366px; // Максимальная ширина контейнера
 $gutter: 15px; // Расстояние между колонками
 $offset: 30px; // Поля контейнера
 $offset-sm: 15px; // Поля контейнера на мобилке
@@ -27,17 +27,31 @@ $break_xs: 576px;
 
 // Шрифты
 // @include font-face("EastAP", "../fonts/EastAP/EastAP", bold, italic);
+@include font-face("Gilroy", "../fonts/Gilroy/Gilroy-Thin/Gilroy-Thin", 200, normal);
+@include font-face("Gilroy", "../fonts/Gilroy/Gilroy-Light/Gilroy-Light", 300, normal);
+@include font-face("Gilroy", "../fonts/Gilroy/Gilroy-Regular/Gilroy-Regular", normal, normal);
+@include font-face("Gilroy", "../fonts/Gilroy/Gilroy-Medium/Gilroy-Medium", 500, normal);
+@include font-face("Gilroy", "../fonts/Gilroy/Gilroy-SemiBold/Gilroy-SemiBold", 600, normal);
+@include font-face("Gilroy", "../fonts/Gilroy/Gilroy-SemiBoldItalic/Gilroy-SemiBoldItalic", 600, italic);
+@include font-face("Gilroy", "../fonts/Gilroy/Gilroy-Bold/Gilroy-Bold", bold, normal);
+@include font-face("Gilroy", "../fonts/Gilroy/Gilroy-BoldItalic/Gilroy-BoldItalic", bold, italic);
+@include font-face("Gilroy", "../fonts/Gilroy/Gilroy-Black/Gilroy-Black", 900, normal);
+@include font-face("Gilroy", "../fonts/Gilroy/Gilroy-BlackItalic/Gilroy-BlackItalic", 900, italic);
+@include font-face("Bodoni", "../fonts/BodoniEgyptianPro/BodoniEgyptianPro-MediumIta/BodoniEgyptianPro-MediumIta", 500, italic);
 
 // Цвета
-// $black: #000;
+$black: #2e2e2e;
+$pink: #ff8cbe;
+$pinkLight: #ffc6e5;
+$blue: #4a51ea;
 
 // Блоки
 @import 'blocks/menu';
 // @import 'blocks/mmenu';
 @import 'blocks/tabs';
-@import 'blocks/accordeon';
-@import 'blocks/form';
-@import 'blocks/modal';
-@import 'blocks/tooltipster-noir';
+// @import 'blocks/accordeon';
+// @import 'blocks/form';
+// @import 'blocks/modal';
+// @import 'blocks/tooltipster-noir';
 
 @import 'template';

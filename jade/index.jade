@@ -1,0 +1,403 @@
+extends blocks/base.jade
+
+block title 
+	title Главная
+
+block content
+
+		include blocks/header.jade
+		
+		// first-screen
+		section.first-screen
+			.first-screen_content
+				h1.first-screen_title лазерная эпиляция 
+				.first-screen_text от 400 рублей <br>с гарантией результата!
+				.first-screen_btn
+					a(href="#").first-screen_link Выбрать ЗОНУ УДАЛЕНИЯ ВОЛОС!
+			.first-screen_img(data-animate-wrap)
+				img(src="img/woomen-first.png", alt="woomen" data-animate-x="0.1").first-screen_woomen
+				img(src="img/circle-1.png", alt="circle" data-animate-x="0.05").first-screen_circle-1
+				img(src="img/circle-2.png", alt="circle" data-animate-x="0.05").first-screen_circle-2
+				.first-screen_subtext.first-screen_subtext--1(data-animate-xy="1") Работаем с любыми <br>типами кожи
+				.first-screen_subtext.first-screen_subtext--2(data-animate-xy="1") БЕЗБОЛЕЗНЕННО <br>И АККУРАТНО
+				.first-screen_subtext.first-screen_subtext--3(data-animate-xy="1") На лучшем аппарате <br>в стране
+			.arrow-next
+				img(src="img/arrow-next.png", alt="arrow")
+		// /first-screen
+
+		// select-zone
+		section.select-zone
+			h2.title-section Выбери зону
+			.select-zone_tabs.tabs
+				ul.select-zone_trigger.tabs_trigger
+					li.select-zone_item.select-zone_item--1.active
+					li.select-zone_item.select-zone_item--2
+					li.select-zone_item.select-zone_item--3
+				.select-zone_content.tabs_content
+					div.select-zone_block.tabs_block
+						.select-zone_img.select-zone_img--1
+							img(src="img/woomen-face.png", alt="woomen")
+						.select-zone_title EPILATION
+						.select-zone_slider
+							
+							.select-zone_arrow.select-zone_arrow--prev
+								img(src="img/white-arrow.png", alt="arrow")
+							.slider-zone#slider-zone-1
+								div.slider-zone_slide
+									ul.slider-zone_list
+										li.slider-zone_item(data-zone="1") Подбородок 
+											span 1.600
+										li.slider-zone_item(data-zone="2") Бакенбарды 
+											span 900
+										li.slider-zone_item(data-zone="3") Щеки 
+											span 1.400
+										li.slider-zone_item(data-zone="4") Нос 
+											span 1.300
+										li.slider-zone_item(data-zone="5") Верхняя губа 
+											span 1.500
+								div.slider-zone_slide
+									ul.slider-zone_list
+										li.slider-zone_item(data-zone="all") Лицо полностью 
+											span 3.700
+										li.slider-zone_item(data-zone="6") Лоб 
+											span 1.200
+										li.slider-zone_item(data-zone="7") Уши 
+											span 850
+										li.slider-zone_item(data-zone="8") Виски 
+											span 1.000
+										li.slider-zone_item(data-zone="9") Брови/Межбровье 
+											span 1.500
+								div.slider-zone_slide
+									ul.slider-zone_list
+										li.slider-zone_item Лицо полностью 
+											span 3.700
+										li.slider-zone_item Лоб 
+											span 1.200
+										li.slider-zone_item Уши 
+											span 850
+										li.slider-zone_item Виски 
+											span 1.000
+										li.slider-zone_item Брови/Межбровье 
+											span 1.500
+							.select-zone_arrow.select-zone_arrow--next
+								img(src="img/white-arrow.png", alt="arrow")
+						.select-zone_offer
+							a(href="#").select-zone_btn ЗАПИСАТЬСЯ
+							.select-zone_sale со СКИДКОЙ 30%
+						.zone-face
+							.zone-face_img.zone-face_img--1.active
+								img(src="img/chin.png", alt="chin")
+							.zone-face_img.zone-face_img--2
+								img(src="img/whisker.png", alt="whisker")
+							.zone-face_img.zone-face_img--3
+								img(src="img/jowls.png", alt="jowls")
+							.zone-face_img.zone-face_img--4
+								img(src="img/nose.png", alt="nose")
+							.zone-face_img.zone-face_img--5
+								img(src="img/moustache.png", alt="moustache")
+							.zone-face_img.zone-face_img--6
+								img(src="img/forehead.png", alt="forehead")
+							.zone-face_img.zone-face_img--7
+								img(src="img/ears.png", alt="ears")
+
+					div.select-zone_block.tabs_block.hide
+						.select-zone_img.select-zone_img--2
+							img(src="img/woomen-body.png", alt="woomen")
+						.select-zone_title EPILATION
+						.select-zone_slider
+							
+							.select-zone_arrow.select-zone_arrow--prev
+								img(src="img/white-arrow.png", alt="arrow")
+							.slider-zone#slider-zone-2
+								div.slider-zone_slide
+									ul.slider-zone_list
+										li.slider-zone_item Подбородок
+											span 1.600
+										li.slider-zone_item Бакенбарды 
+											span 900
+										li.slider-zone_item Щеки 
+											span 1.400
+										li.slider-zone_item Нос 
+											span 1.300
+										li.slider-zone_item Верхняя губа 
+											span 1.500
+										li.slider-zone_item Подбородок
+											span 1.600
+										li.slider-zone_item Бакенбарды 
+											span 900
+										li.slider-zone_item Щеки 
+											span 1.400
+										li.slider-zone_item Нос 
+											span 1.300
+										li.slider-zone_item Верхняя губа 
+								div.slider-zone_slide
+									ul.slider-zone_list
+										li.slider-zone_item Лицо полностью 
+											span 3.700
+										li.slider-zone_item Лоб 
+											span 1.200
+										li.slider-zone_item Уши 
+											span 850
+										li.slider-zone_item Виски 
+											span 1.000
+										li.slider-zone_item Брови/Межбровье 
+											span 1.500
+								div.slider-zone_slide
+									ul.slider-zone_list
+										li.slider-zone_item Лицо полностью 
+											span 3.700
+										li.slider-zone_item Лоб 
+											span 1.200
+										li.slider-zone_item Уши 
+											span 850
+										li.slider-zone_item Виски 
+											span 1.000
+										li.slider-zone_item Брови/Межбровье 
+											span 1.500
+							.select-zone_arrow.select-zone_arrow--next
+								img(src="img/white-arrow.png", alt="arrow")
+						.select-zone_offer
+							a(href="#").select-zone_btn ЗАПИСАТЬСЯ
+							.select-zone_sale со СКИДКОЙ 30%
+
+					div.select-zone_block.select-zone_block--men.tabs_block.hide
+						.select-zone_img.select-zone_img--3
+							img(src="img/men-apilation.png", alt="men")
+						.select-zone_title EPILATION
+						.select-zone_slider
+							
+							.select-zone_arrow.select-zone_arrow--prev
+								img(src="img/white-arrow.png", alt="arrow")
+							.slider-zone#slider-zone-3
+								div.slider-zone_slide
+									ul.slider-zone_list
+										li.slider-zone_item Подбородок
+											span 1.600
+										li.slider-zone_item Бакенбарды 
+											span 900
+										li.slider-zone_item Щеки 
+											span 1.400
+										li.slider-zone_item Нос 
+											span 1.300
+										li.slider-zone_item Верхняя губа 
+											span 1.500
+										li.slider-zone_item Подбородок
+											span 1.600
+										li.slider-zone_item Бакенбарды 
+											span 900
+										li.slider-zone_item Щеки 
+											span 1.400
+										li.slider-zone_item Нос 
+											span 1.300
+										li.slider-zone_item Верхняя губа 
+											span 1.500
+								div.slider-zone_slide
+									ul.slider-zone_list
+										li.slider-zone_item Лицо полностью 
+											span 3.700
+										li.slider-zone_item Лоб 
+											span 1.200
+										li.slider-zone_item Уши 
+											span 850
+										li.slider-zone_item Виски 
+											span 1.000
+										li.slider-zone_item Брови/Межбровье 
+											span 1.500
+										li.slider-zone_item Подбородок
+											span 1.600
+										li.slider-zone_item Бакенбарды 
+											span 900
+										li.slider-zone_item Щеки 
+											span 1.400
+										li.slider-zone_item Нос 
+											span 1.300
+										li.slider-zone_item Верхняя губа 
+											span 1.500
+								div.slider-zone_slide
+									ul.slider-zone_list
+										li.slider-zone_item Лицо полностью 
+											span 3.700
+										li.slider-zone_item Лоб 
+											span 1.200
+										li.slider-zone_item Уши 
+											span 850
+										li.slider-zone_item Виски 
+											span 1.000
+										li.slider-zone_item Брови/Межбровье 
+											span 1.500
+										li.slider-zone_item Подбородок
+											span 1.600
+										li.slider-zone_item Бакенбарды 
+											span 900
+										li.slider-zone_item Щеки 
+											span 1.400
+										li.slider-zone_item Нос 
+											span 1.300
+										li.slider-zone_item Верхняя губа 
+											span 1.500
+							.select-zone_arrow.select-zone_arrow--next
+								img(src="img/white-arrow.png", alt="arrow")
+						.select-zone_offer
+							a(href="#").select-zone_btn.select-zone_btn--men ЗАПИСАТЬСЯ
+							.select-zone_sale со СКИДКОЙ 30%
+		// /select-zone
+		
+		// advantages
+		section.advantages
+			.advantages_box
+				.advantages_block
+					.advantages_img
+						img(src="img/advantages.png", alt="image")
+					h2.advantages_text ЧТО <br>ВАС <br>ЖДЕТ В <br>IMPERIUMCLINIC?
+
+				ul.advantages_list
+					li.advantages_item Дополнительные услуги
+					li.advantages_item Низкие цены
+					li.advantages_item Удобное месторасположение 
+						span (м.Чкаловская/м.Курская)
+					li.advantages_item Новейшее оборудование
+					li.advantages_item Отличный сервис
+			.operating-time
+				.operating-time_img
+					img(src="img/flower.png", alt="flower")
+				ul.operating-time_list
+					li.operating-time_item 10-15 мин
+						span обработка одной зоны
+					li.operating-time_item 30-40 % 
+						span волос удалятся после первого сеанса
+					li.operating-time_item 5-7
+						span сеансов для полного удаления волос
+		// /advantages
+
+		// set
+		section.set
+			h2.title-section
+				span КОМБО 
+				| НАБОР
+			.set_sale выгода 30%
+			.set_row
+				.set_col
+					.set_block
+						.set_subtitle НАБОР №1
+						.set_line
+						.set_text ЭПИЛЯЦИЯ
+							span.set_bold-big 2-x
+							span.set_bold-small ЛЮБЫХ 
+							| зон 
+						.set_bottom-block
+							.set_price 4.490 Р
+							a(href="#").set_btn ЗАПИСАТЬСЯ
+				.set_col
+					.set_block
+						.set_subtitle НАБОР №2
+						.set_line
+						.set_text ЭПИЛЯЦИЯ
+							span.set_bold-big 3-х 
+							span.set_bold-small ЛЮБЫХ 
+							| зон
+						.set_bottom-block
+							.set_price 6.490 Р
+							a(href="#").set_btn ЗАПИСАТЬСЯ
+						.set_like
+				.set_col
+					.set_block
+						.set_subtitle НАБОР №3
+						.set_line
+						.set_text ЭПИЛЯЦИЯ
+							span.set_bold-big 4-х 
+							span.set_bold-small ЛЮБЫХ 
+							| зон
+						.set_bottom-block
+							.set_subprice.set_subprice--blue +1 ЗОНА  = 1.000 руб
+							.set_price 7.490 Р
+							a(href="#").set_btn ЗАПИСАТЬСЯ
+				.set_col
+					.set_block
+						.set_subtitle.set_subtitle--bold ВСЕ ТЕЛО
+						ul.set_list
+							li.set_item Ноги
+							li.set_item Руки 
+							li.set_item Глубокое бикини
+							li.set_item Подмышки
+							li.set_item Живот
+							li.set_item Поясница
+							li.set_item Верхняя губа
+						.set_bottom-block
+							.set_subprice 16.490 Р
+							.set_price 12.000 Р
+							a(href="#").set_btn ЗАПИСАТЬСЯ
+		// /set
+
+		// prize
+		section.prize
+			.prize_block
+				.prize_content
+					h2.prize_title ЗАПИСЫВАЙСЯ НА ЭПИЛЯЦИЮ ЛЮБОЙ ЗОНЫ СО СКИДКОЙ 
+					.prize_sale 30%
+				.prize_btn
+					a(href="#").prize_link ЗАПИСАТЬСЯ
+		// /prize
+
+		// workers
+		section.workers
+			.title-section Наши сотрудники
+			.workers_branch
+				img(src="img/branch.png", alt="branch")
+			.workers_slider
+				.workers_slider-container
+					.slider-workers_btn.slider-workers_btn--prev 
+						span &larr;
+					.slider-workers
+						.slider-workers_slide
+							.slider-workers_block
+								.slider-workers_img
+									img(src="img/worker-1.jpg", alt="image")
+								.slider-workers_content
+									.slider-workers_description
+										span Мастер-лазерной эпиляции 
+										| Стаж работы более 3 лет.
+									.slider-workers_name Лоргунова Любовь Константиновна
+									p.slider-workers_text Закончила интернатурe по дерматовенерологии <br>в Первом московском государственном медицинском университете им. И.М.Сеченова , повышение квалификации по косметологии на сертификат врача косметолога
+									p.slider-workers_text Повышение квалификации на базе Моники им М.Владимирского по специальности врач-косметолог.
+									.slider-workers_sertificates
+										img(src="img/sertificate-1.jpg", alt="sertificate")
+										img(src="img/sertificate-2.jpg", alt="sertificate")
+									.slider-workers_emblem
+										img(src="img/emblem.png", alt="emblem")
+						.slider-workers_slide
+							.slider-workers_block
+								.slider-workers_img
+									img(src="img/worker-1.jpg", alt="image")
+								.slider-workers_content
+									.slider-workers_description
+										span Мастер-лазерной эпиляции 
+										| Стаж работы более 3 лет.
+									.slider-workers_name Лоргунова Любовь Константиновна
+									p.slider-workers_text Закончила интернатурe по дерматовенерологии <br>в Первом московском государственном медицинском университете им. И.М.Сеченова , повышение квалификации по косметологии на сертификат врача косметолога
+									p.slider-workers_text Повышение квалификации на базе Моники им М.Владимирского по специальности врач-косметолог.
+									.slider-workers_sertificates
+										img(src="img/sertificate-1.jpg", alt="sertificate")
+										img(src="img/sertificate-2.jpg", alt="sertificate")
+									.slider-workers_emblem
+										img(src="img/emblem.png", alt="emblem")
+					.slider-workers_btn.slider-workers_btn--next
+						span &rarr;
+
+		// /workers
+			
+		include blocks/footer.jade
+
+block js
+	script(src="js/jquery-3.2.1.min.js")
+	//- script(src="js/jquery.fancybox.min.js")
+	script(src="js/slick.min.js")
+	//- script(src="js/jquery.matchHeight-min.js")
+	//- script(src="js/jquery.inputmask.bundle.min.js")
+	//- script(src="js/jquery.tinyscrollbar.min.js")
+	//- script(src="js/autosize.min.js")
+	//- script(src="js/tooltipster.bundle.min.js")
+	//- script(src="js/jquery.mmenu.all.js")
+	//- script(src="js/wow.min.js")
+	//- script(src="js/fullpage.min.js")
+	script(src="js/twinmax.min.js")
+	script(src="js/script.js")
