@@ -285,6 +285,7 @@ body {
 		background-position: 0 0;
 		background-size: 50em;
 		background-repeat: no-repeat;
+		position: relative;
 		&--1 {
 			background-image: url(../img/face-sprite.png);
 		}
@@ -293,6 +294,18 @@ body {
 		}
 		&--3 {
 			background-image: url(../img/removal-sprite.png);
+			span {
+				bottom: -1.55em;
+			}
+		}
+		span {
+			display: block;
+			width: 8em;
+			font-size: 1.8em;
+			position: absolute;
+			left: 50%;
+			bottom: -1em;
+			transform: translate(-50%,0);
 		}
 	}
 	&_content {
@@ -307,21 +320,21 @@ body {
 	}
 	&_img {
 		&--1 {
-			margin-left: 12em;
+			margin-left: 13.5em;
 			img {
-				width: 56em;
+				width: 53em;
 				display: block;
 			}
 		}
 		&--2 {
-			margin-left: 25em;
+			margin-left: 28em;
 			img {
-				width: 26.4em;
+				width: 21.4em;
 				display: block;
 			}
 		}
 		&--3 {
-			margin-left: 2em;
+			margin-left: 0em;
 			img {
 				width: 73.4em;
 				display: block;
@@ -335,6 +348,8 @@ body {
 		position: absolute;
 		left: 2.9em;
 		bottom: 0.45em;
+		text-align: center;
+		line-height: 1em;
 	}
 	&_slider {
 		width: 44em;
@@ -476,9 +491,9 @@ body {
 		}
 		&--4 {
 			top: 10.5em;
-			left: 11.5em;
+			left: 11.35em;
 			img {
-				width: 7em;
+				width: 7.3em;
 			}
 		}
 		&--5 {
@@ -599,6 +614,11 @@ body {
 			right: 0;
 			top: 0;
 			background-color: #f4b6b3;
+		}
+		&:nth-child(3) {
+			&:after {
+				display: none;
+			}
 		}
 	}
 }
@@ -838,7 +858,7 @@ body {
 		z-index: 2;
 		span {
 			position: absolute;
-			top: 0.25em;
+			top: 0.27em;
 			left: 0.45em;
 			font-size: 1.6em;
 			cursor: pointer;
@@ -932,3 +952,79 @@ body {
 	outline: none;
 }
 // /workers
+
+// equipment
+.equipment {
+	padding: 1em 0em 1em 0em;
+	&_block {
+		width: 78em;
+		padding: 2.7em 1em 1em 1em;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		color: $pink;
+	}
+	&_name {
+		font-size: 2.2em;
+		font-weight: bold;
+	}
+	&_text {
+		width: 13em;
+		font-size: 1.5em;
+		position: absolute;
+		span {
+			margin-top: 0.5em;
+			display: block;
+			font-size: 0.8em;
+		}
+		&:after {
+			content: '';
+			display: block;
+			width: 6em;
+			height: 6em;
+			background-size: cover;
+			position: absolute;
+			top: 50%;
+			transform: translate(0,-50%);
+		}
+		&--1 {
+			top: 6em;
+			left: 3em;
+			&:after {
+				background-image: url(../img/equipment-icon-1.png);
+				right: -5em;
+			}
+		}
+		&--2 {
+			top: 6em;
+			left: 35.5em;
+			&:after {
+				background-image: url(../img/equipment-icon-2.png);
+				left: -5em;
+			}
+		}
+		&--3 {
+			top: 16em;
+			left: 2em;
+			&:after {
+				background-image: url(../img/equipment-icon-3.png);
+				right: -5em;
+			}
+		}
+		&--4 {
+			top: 16em;
+			left: 37.5em;
+			&:after {
+				background-image: url(../img/equipment-icon-4.png);
+				left: -5em;
+			}
+		}
+	}
+	&_img {
+		img {
+			width: 33em;
+		}	
+	}
+}
+// /equipment

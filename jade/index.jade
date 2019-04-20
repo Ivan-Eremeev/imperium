@@ -31,8 +31,11 @@ block content
 			.select-zone_tabs.tabs
 				ul.select-zone_trigger.tabs_trigger
 					li.select-zone_item.select-zone_item--1.active
+						span ЛИЦО
 					li.select-zone_item.select-zone_item--2
+						span ТЕЛО
 					li.select-zone_item.select-zone_item--3
+						span МУЖСКАЯ ЭПИЛЯЦИЯ
 				.select-zone_content.tabs_content
 					div.select-zone_block.tabs_block
 						.select-zone_img.select-zone_img--1
@@ -163,7 +166,7 @@ block content
 					div.select-zone_block.select-zone_block--men.tabs_block.hide
 						.select-zone_img.select-zone_img--3
 							img(src="img/men-apilation.png", alt="men")
-						.select-zone_title EPILATION
+						.select-zone_title MEN`S <br>EPILATION
 						.select-zone_slider
 							
 							.select-zone_arrow.select-zone_arrow--prev
@@ -382,8 +385,24 @@ block content
 										img(src="img/emblem.png", alt="emblem")
 					.slider-workers_btn.slider-workers_btn--next
 						span &rarr;
-
 		// /workers
+
+		// equipment
+		.equipment
+			.title-section Наш аппарат
+			.equipment_block
+				.equipment_name DILAS 808-M
+				.equipment_text.equipment_text--1 Высокая мощность
+					span получите длительный эффект всего за 5-7 процедур
+				.equipment_text.equipment_text--2 Быстрый результат
+					span Выпадение волос наступает уже на 10-ый день
+				.equipment_text.equipment_text--3 Безопасность
+					span Аппарат имеет все необходимые сертификаты и прошел проверку Роспотребнадзора
+				.equipment_text.equipment_text--4 Подходит всем
+					span Для любого цветотипа и волосков любой сложности
+				.equipment_img
+					img(src="img/equipment.png", alt="equipment")
+		// /equipment
 			
 		include blocks/footer.jade
 
