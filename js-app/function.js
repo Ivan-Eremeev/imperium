@@ -12,7 +12,7 @@ $(document).ready(function () {
 	// libs-settings/fancybox_settings.js
 	// libs-settings/mmenu_settings.js
 	// @prepros-prepend libs-settings/slick_settings.js
-	// libs-settings/wow_js_settings.js
+	// @prepros-prepend libs-settings/wow_js_settings.js
 	// libs-settings/fullpage_settings.js
 
 	// Брэйкпоинты js
@@ -54,13 +54,13 @@ $(document).ready(function () {
 	// screenHeight();
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	// $('#main__menu a[href^="#"]').click( function(){ 
-	// 	var scroll_el = $(this).attr('href'); 
-	// 	if ($(scroll_el).length != 0) {
-	// 	$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
-	// 	}
-	// 	return false;
-	// });
+	$('#scroll a[href^="#"]').click( function(){ 
+		var scroll_el = $(this).attr('href'); 
+		if ($(scroll_el).length != 0) {
+		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+		}
+		return false;
+	});
 
 	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
 	// var HeaderTop = $('#header').offset().top;
@@ -127,24 +127,93 @@ $(document).ready(function () {
 		}
 	});
 
+	// Секция "Галерея"
+	var mySwiper5 = new Swiper('#swiper5',{
+    loop: true,
+    speed: 1000,
+    slidesPerView: 1,
+    nextButton: '.next5',
+    prevButton: '.prev5',
+    pagination: '.sp5',
+    paginationClickable: true,
+    effect: 'coverflow',
+    loopAdditionalSlides: 15,
+    coverflow: {
+      rotate: 0,
+      stretch: 950,
+      modifier: 1,
+      slideShadows : false
+    }
+	});
+
+	var gres = true;
+    $(".galley_tabs a").click(function () {
+      if($(this).hasClass('active')){}
+      else {
+        target = $(this).attr('data-target');
+
+        $(".galley_tabs a").removeClass('active');
+        $(this).addClass('active');
+        $('.gallery_slider').css('display','none');
+        $('#'+target).fadeIn(200);
+        if(gres == true){
+          gres = false;
+          var mySwiper7 = new Swiper('#swiper7',{
+            loop: true,
+            speed: 1000,
+            slidesPerView: 1,
+            nextButton: '.next7',
+            prevButton: '.prev7',
+            pagination: '.sp7',
+            paginationClickable: true,
+            effect: 'coverflow',
+            loopAdditionalSlides: 15,
+            coverflow: {
+                rotate: 0,
+                stretch: 950,
+                modifier: 1,
+                slideShadows : false
+            }
+        });
+      }
+    }
+  });
+
+  $('.gallery_slide').each(function() {
+  	var data = $(this).data('style');
+  		$(this).attr('style',data);
+  });
+
+  // Было стало в "Наши работы"
+  // $('.slider-portfolio_toggle').click(function() {
+  // 	var $this = $(this),
+  // 			slideBlock = $this.parent('.slider-portfolio_slide-block'),
+  // 			imgPrev = slideBlock.find('img[data-time="prev"]'),
+  // 			imgNext = slideBlock.find('img[data-time="next"]'),
+  // 			input = slideBlock.find('input[type=checkbox]'),
+  // 			inputCheck = input.prop('checked'),
+  // 			time = 300;
+  // 			if (!inputCheck) {
+  // 				imgPrev.fadeOut(time);
+  // 				imgNext.fadeIn(time);
+  // 			}
+  // 			else {
+  // 				imgPrev.fadeIn(time);
+  // 				imgNext.fadeOut(time);
+  // 			}
+  // 			console.log(slideBlock, $this, imgPrev, imgNext, input)
+  // });
+
 	// Аккордеон
-	// $('.accordeon_trigger').click(function() {
-	// 	var trigger = $(this),
-	// 			allTrigger = trigger.parent().parent().find('.accordeon_trigger'),
-	// 			content = trigger.siblings('.accordeon_content'),
-	// 			allContent = trigger.parent().parent().find('.accordeon_content'),
-	// 			time = 300;
-	// 	if (!content.hasClass('open')) {
-	// 		allContent.stop().slideUp(time).removeClass('open');
-	// 		content.stop().slideDown(time).addClass('open');
-	// 		allTrigger.removeClass('active');
-	// 		trigger.addClass('active');
-	// 	}
-	// 	else {
-	// 		content.stop().slideUp(time).removeClass('open');
-	// 		trigger.removeClass('active');
-	// 	}
-	// });
+	$('.accordeon_trigger').click(function() {
+		var trigger = $(this),
+				allTrigger = trigger.parent().parent().find('.accordeon_trigger'),
+				content = trigger.siblings('.accordeon_content'),
+				allContent = trigger.parent().parent().find('.accordeon_content'),
+				time = 300;
+		trigger.toggleClass('active');
+		content.toggleClass('open');
+	});
 
 	// Модальное окно
 	// $('.modal-trigger').on('click', function() {
@@ -335,7 +404,7 @@ $(document).ready(function () {
 	});
 
 	// TweenMax.min.js
-	// data - animate - wrap - обертка с плавающими блоками
+	// data-animate-wrap - обертка с плавающими блоками
 	// data-animate-x - блок движется по оси Х
 	// data-animate-xy - блок движется по обеим осям
 	function parallaxMove() {

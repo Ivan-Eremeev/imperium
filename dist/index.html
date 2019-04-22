@@ -40,7 +40,7 @@
     </header>
     <!-- /header-->
     <!-- first-screen-->
-    <section class="first-screen">
+    <section class="first-screen" id="scroll">
       <div class="first-screen_content">
         <h1 class="first-screen_title">лазерная эпиляция </h1>
         <div class="first-screen_text">от 400 рублей <br>с гарантией результата!</div>
@@ -50,12 +50,11 @@
         <div class="first-screen_subtext first-screen_subtext--1" data-animate-xy="1">Работаем с любыми <br>типами кожи</div>
         <div class="first-screen_subtext first-screen_subtext--2" data-animate-xy="1">БЕЗБОЛЕЗНЕННО <br>И АККУРАТНО</div>
         <div class="first-screen_subtext first-screen_subtext--3" data-animate-xy="1">На лучшем аппарате <br>в стране</div>
-      </div>
-      <div class="arrow-next"><img src="img/arrow-next.png" alt="arrow"></div>
+      </div><a class="arrow-next" href="#select-zone"><img src="img/arrow-next.png" alt="arrow"></a>
     </section>
     <!-- /first-screen-->
     <!-- select-zone-->
-    <section class="select-zone">
+    <section class="select-zone" id="select-zone">
       <h2 class="title-section">Выбери зону</h2>
       <div class="select-zone_tabs tabs">
         <ul class="select-zone_trigger tabs_trigger">
@@ -233,11 +232,11 @@
         </ul>
       </div>
       <div class="operating-time">
-        <div class="operating-time_img"><img src="img/flower.png" alt="flower"></div>
+        <div class="operating-time_img" data-animate-wrap><img src="img/flower.png" alt="flower" data-animate-xy="2"></div>
         <ul class="operating-time_list">
-          <li class="operating-time_item">10-15 мин<span>обработка одной зоны</span></li>
-          <li class="operating-time_item">30-40 % <span>волос удалятся после первого сеанса</span></li>
-          <li class="operating-time_item">5-7<span>сеансов для полного удаления волос</span></li>
+          <li class="operating-time_item wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.3s">10-15 мин<span>обработка одной зоны</span></li>
+          <li class="operating-time_item wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.6s">30-40 % <span>волос удалятся после первого сеанса</span></li>
+          <li class="operating-time_item wow fadeInRight" data-wow-duration="1s" data-wow-delay="0.9s">5-7<span>сеансов для полного удаления волос</span></li>
         </ul>
       </div>
     </section>
@@ -313,7 +312,7 @@
     <!-- /prize-->
     <!-- workers-->
     <section class="workers">
-      <div class="title-section">Наши сотрудники</div>
+      <h2 class="title-section">Наши сотрудники</h2>
       <div class="workers_branch"><img src="img/branch.png" alt="branch"></div>
       <div class="workers_slider">
         <div class="workers_slider-container">
@@ -352,18 +351,226 @@
     </section>
     <!-- /workers-->
     <!-- equipment-->
-    <div class="equipment">
-      <div class="title-section">Наш аппарат</div>
+    <section class="equipment" data-animate-wrap>
+      <h2 class="title-section">Наш аппарат</h2>
       <div class="equipment_block">
-        <div class="equipment_name">DILAS 808-M</div>
-        <div class="equipment_text equipment_text--1">Высокая мощность<span>получите длительный эффект всего за 5-7 процедур</span></div>
-        <div class="equipment_text equipment_text--2">Быстрый результат<span>Выпадение волос наступает уже на 10-ый день</span></div>
-        <div class="equipment_text equipment_text--3">Безопасность<span>Аппарат имеет все необходимые сертификаты и прошел проверку Роспотребнадзора</span></div>
-        <div class="equipment_text equipment_text--4">Подходит всем<span>Для любого цветотипа и волосков любой сложности</span></div>
-        <div class="equipment_img"><img src="img/equipment.png" alt="equipment"></div>
+        <div class="equipment_name" data-animate-x="0.1">DILAS 808-M</div>
+        <div class="equipment_text equipment_text--1" data-animate-xy="1">Высокая мощность<span>получите длительный эффект всего за 5-7 процедур</span></div>
+        <div class="equipment_text equipment_text--2" data-animate-xy="1">Быстрый результат<span>Выпадение волос наступает уже на 10-ый день</span></div>
+        <div class="equipment_text equipment_text--3" data-animate-xy="1">Безопасность<span>Аппарат имеет все необходимые сертификаты и прошел проверку Роспотребнадзора</span></div>
+        <div class="equipment_text equipment_text--4" data-animate-xy="1">Подходит всем<span>Для любого цветотипа и волосков любой сложности</span></div>
+        <div class="equipment_img" data-animate-x="0.1"><img src="img/equipment.png" alt="equipment"></div>
       </div>
-    </div>
+    </section>
     <!-- /equipment-->
+    <!-- portfolio-->
+    <section class="portfolio">
+      <div class="portfolio_content">
+        <div class="portfolio_slider-for">
+          <div class="slider-portfolio-for">
+            <div class="slider-portfolio-for_slide">01/3</div>
+            <div class="slider-portfolio-for_slide">02/3</div>
+            <div class="slider-portfolio-for_slide">03/3</div>
+          </div>
+        </div>
+        <h2 class="portfolio_title">НАШИ РАБОТЫ</h2>
+        <div class="portfolio_nav">
+          <div class="slider-portfolio_btn slider-portfolio_btn--prev"><span>&larr;</span></div>
+          <div class="slider-portfolio_btn slider-portfolio_btn--next"><span>&rarr;</span></div>
+        </div>
+        <div class="portfolio_img"><img src="img/portfolio-1.png" alt="image"></div>
+      </div>
+      <div class="portfolio_img2"><img src="img/portfolio-2.png" alt="image"></div>
+      <div class="portfolio_slider">
+        <div class="slider-portfolio">
+          <div class="slider-portfolio_slide">
+            <div class="slider-portfolio_slide-block">
+              <input id="check-img-1" type="checkbox"><img src="img/portfolio/slide-1-prev.png" alt="image" data-time="prev"><img src="img/portfolio/slide-1-next.png" alt="image" data-time="next">
+              <label class="slider-portfolio_toggle" for="check-img-1"><span class="slider-portfolio_text">БЫЛО</span><span class="slider-portfolio_check"><span class="slider-portfolio_line"></span><span class="slider-portfolio_circle"></span></span><span class="slider-portfolio_text">СТАЛО</span></label>
+            </div>
+          </div>
+          <div class="slider-portfolio_slide">
+            <div class="slider-portfolio_slide-block">
+              <input id="check-img-2" type="checkbox"><img src="img/portfolio/slide-1-prev.png" alt="image" data-time="prev"><img src="img/portfolio/slide-1-next.png" alt="image" data-time="next">
+              <label class="slider-portfolio_toggle" for="check-img-2"><span class="slider-portfolio_text">БЫЛО</span><span class="slider-portfolio_check"><span class="slider-portfolio_line"></span><span class="slider-portfolio_circle"></span></span><span class="slider-portfolio_text">СТАЛО</span></label>
+            </div>
+          </div>
+          <div class="slider-portfolio_slide">
+            <div class="slider-portfolio_slide-block">
+              <input id="check-img-3" type="checkbox"><img src="img/portfolio/slide-1-prev.png" alt="image" data-time="prev"><img src="img/portfolio/slide-1-next.png" alt="image" data-time="next">
+              <label class="slider-portfolio_toggle" for="check-img-3"><span class="slider-portfolio_text">БЫЛО</span><span class="slider-portfolio_check"><span class="slider-portfolio_line"></span><span class="slider-portfolio_circle"></span></span><span class="slider-portfolio_text">СТАЛО</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /portfolio-->
+    <!-- faq-->
+    <section class="faq">
+      <div class="faq_block"><img class="faq_img-1" src="img/flower-1.png" alt="flower"><img class="faq_img-2" src="img/flower-2.png" alt="flower"><img class="faq_img-3" src="img/branch-1.png" alt="branch"><img class="faq_img-4" src="img/gallery-model.png" alt="woomen">
+        <div class="faq_block-inner">
+          <div class="faq_subblock">
+            <h2 class="faq_title">ЧАСТЫЕ ВОПРОСЫ</h2>
+            <div class="accordeon">
+              <div class="accordeon_item">
+                <div class="accordeon_trigger">Как подготовиться к лазерной эпиляции?</div>
+                <div class="accordeon_content">Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+              </div>
+              <div class="accordeon_item">
+                <div class="accordeon_trigger">Как подготовиться к лазерной эпиляции?</div>
+                <div class="accordeon_content">Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+              </div>
+              <div class="accordeon_item">
+                <div class="accordeon_trigger">Как подготовиться к лазерной эпиляции?</div>
+                <div class="accordeon_content">Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+              </div>
+              <div class="accordeon_item">
+                <div class="accordeon_trigger">Как подготовиться к лазерной эпиляции?</div>
+                <div class="accordeon_content">Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+              </div>
+              <div class="accordeon_item">
+                <div class="accordeon_trigger">Как подготовиться к лазерной эпиляции?</div>
+                <div class="accordeon_content">Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- /faq-->
+    <!-- gallery--><section class="screen_8">
+<div class="wrapper">
+<h2 class="title-section">Галерея</h2>
+<div class="galley_tabs flex align-items-center justify-content-center">
+<a data-target="gtab_1" class="active">Фото</a>
+<a data-target="gtab_2">Видео</a>
+</div>
+<div id="gtab_1" class="gallery_slider">
+<div class="ps_arrows flex align-items-center justify-content-between">
+<a class="prev5"></a>
+<div class="swiper-pagination sp5"></div>
+<a class="next5"></a>
+</div>
+<div class="swiper5" id="swiper5">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/1.jpg" class="gallery_slide" data-style="background: url('img/gallery/1.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/2.jpg" class="gallery_slide" data-style="background: url('img/gallery/2.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/3.jpg" class="gallery_slide" data-style="background: url('img/gallery/3.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/4.jpg" class="gallery_slide" data-style="background: url('img/gallery/4.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/5.jpg" class="gallery_slide" data-style="background: url('img/gallery/5.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/6.jpg" class="gallery_slide" data-style="background: url('img/gallery/6.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/7.jpg" class="gallery_slide" data-style="background: url('img/gallery/7.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/8.jpg" class="gallery_slide" data-style="background: url('img/gallery/8.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/9.jpg" class="gallery_slide" data-style="background: url('img/gallery/9.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/10.jpg" class="gallery_slide" data-style="background: url('img/gallery/10.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/11.jpg" class="gallery_slide" data-style="background: url('img/gallery/11.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/12.jpg" class="gallery_slide" data-style="background: url('img/gallery/12.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/13.jpg" class="gallery_slide" data-style="background: url('img/gallery/13.jpg') no-repeat;">
+</a>
+</div>
+</div>
+</div>
+</div>
+<div id="gtab_2" class="gallery_slider" style="display: none">
+<div class="ps_arrows flex align-items-center justify-content-between">
+<a class="prev7"></a>
+<div class="swiper-pagination sp7"></div>
+<a class="next7"></a>
+</div>
+<div class="swiper7" id="swiper7">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a data-fancybox href="https://player.vimeo.com/video/307084093?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb1.jpg') no-repeat center;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="https://player.vimeo.com/video/307083213?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb2.jpg') no-repeat center;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="https://player.vimeo.com/video/307086886?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb3.jpg') no-repeat center;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="https://player.vimeo.com/video/307088149?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb4.jpg') no-repeat center;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="https://player.vimeo.com/video/308186072?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb5.jpg') no-repeat center;">
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
+    <!-- /gallery-->
+    <!-- comments-->
+    <section class="comments">
+      <h2 class="title-section">Отзывы</h2>
+      <div class="comments_slider">
+        <div class="slider-comments_btn slider-comments_btn--prev"><span>&larr;</span></div>
+        <div class="slider-comments">
+          <div class="slider-comments_slide">
+            <div class="slider-comments_img"><img src="img/comment-1.png" alt="image"></div>
+            <div class="slider-comments_title">“Забыла что такое брить ноги!”</div>
+            <p class="slider-comments_text">На самом деле все очень понравилось,начиная от сервиса и заканчиваю подходом специалиста  к процессу эпиляции. Сначала с ним проконсультировалась,специалист ответил на все вопросы.</p>
+            <div class="slider-comments_name">Мария Машенька</div>
+          </div>
+          <div class="slider-comments_slide">
+            <div class="slider-comments_img"><img src="img/comment-1.png" alt="image"></div>
+            <div class="slider-comments_title">“Забыла что такое брить ноги!”</div>
+            <p class="slider-comments_text">На самом деле все очень понравилось,начиная от сервиса и заканчиваю подходом специалиста  к процессу эпиляции. Сначала с ним проконсультировалась,специалист ответил на все вопросы.</p>
+            <div class="slider-comments_name">Мария Машенька</div>
+          </div>
+          <div class="slider-comments_slide">
+            <div class="slider-comments_img"><img src="img/comment-1.png" alt="image"></div>
+            <div class="slider-comments_title">“Забыла что такое брить ноги!”</div>
+            <p class="slider-comments_text">На самом деле все очень понравилось,начиная от сервиса и заканчиваю подходом специалиста  к процессу эпиляции. Сначала с ним проконсультировалась,специалист ответил на все вопросы.</p>
+            <div class="slider-comments_name">Мария Машенька</div>
+          </div>
+        </div>
+        <div class="slider-comments_btn slider-comments_btn--next"><span>&rarr;</span></div>
+      </div>
+      <div class="comments_img"><img src="img/flower-3.png" alt="image"></div>
+    </section>
+    <!-- /comments-->
     <!-- footer-->
     <footer class="footer"> 
       <div class="wrapper"> 
@@ -372,8 +579,11 @@
     </footer>
     <!-- /footer-->
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery.fancybox.min.js"></script>
     <script src="js/slick.min.js"></script>
+    <script src="js/wow.min.js"></script>
     <script src="js/twinmax.min.js"></script>
+    <script src="js/swiper.jquery.min.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>

@@ -8,7 +8,7 @@ block content
 		include blocks/header.jade
 		
 		// first-screen
-		section.first-screen
+		section.first-screen#scroll
 			.first-screen_content
 				h1.first-screen_title лазерная эпиляция 
 				.first-screen_text от 400 рублей <br>с гарантией результата!
@@ -21,12 +21,12 @@ block content
 				.first-screen_subtext.first-screen_subtext--1(data-animate-xy="1") Работаем с любыми <br>типами кожи
 				.first-screen_subtext.first-screen_subtext--2(data-animate-xy="1") БЕЗБОЛЕЗНЕННО <br>И АККУРАТНО
 				.first-screen_subtext.first-screen_subtext--3(data-animate-xy="1") На лучшем аппарате <br>в стране
-			.arrow-next
+			a(href="#select-zone").arrow-next
 				img(src="img/arrow-next.png", alt="arrow")
 		// /first-screen
 
 		// select-zone
-		section.select-zone
+		section.select-zone#select-zone
 			h2.title-section Выбери зону
 			.select-zone_tabs.tabs
 				ul.select-zone_trigger.tabs_trigger
@@ -261,14 +261,14 @@ block content
 					li.advantages_item Новейшее оборудование
 					li.advantages_item Отличный сервис
 			.operating-time
-				.operating-time_img
-					img(src="img/flower.png", alt="flower")
+				.operating-time_img(data-animate-wrap)
+					img(src="img/flower.png", alt="flower", data-animate-xy="2")
 				ul.operating-time_list
-					li.operating-time_item 10-15 мин
+					li.operating-time_item.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="0.3s") 10-15 мин
 						span обработка одной зоны
-					li.operating-time_item 30-40 % 
+					li.operating-time_item.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="0.6s") 30-40 % 
 						span волос удалятся после первого сеанса
-					li.operating-time_item 5-7
+					li.operating-time_item.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="0.9s") 5-7
 						span сеансов для полного удаления волос
 		// /advantages
 
@@ -343,7 +343,7 @@ block content
 
 		// workers
 		section.workers
-			.title-section Наши сотрудники
+			h2.title-section Наши сотрудники
 			.workers_branch
 				img(src="img/branch.png", alt="branch")
 			.workers_slider
@@ -388,27 +388,269 @@ block content
 		// /workers
 
 		// equipment
-		.equipment
-			.title-section Наш аппарат
+		section.equipment(data-animate-wrap)
+			h2.title-section Наш аппарат
 			.equipment_block
-				.equipment_name DILAS 808-M
-				.equipment_text.equipment_text--1 Высокая мощность
+				.equipment_name(data-animate-x="0.1") DILAS 808-M
+				.equipment_text.equipment_text--1(data-animate-xy="1") Высокая мощность
 					span получите длительный эффект всего за 5-7 процедур
-				.equipment_text.equipment_text--2 Быстрый результат
+				.equipment_text.equipment_text--2(data-animate-xy="1") Быстрый результат
 					span Выпадение волос наступает уже на 10-ый день
-				.equipment_text.equipment_text--3 Безопасность
+				.equipment_text.equipment_text--3(data-animate-xy="1") Безопасность
 					span Аппарат имеет все необходимые сертификаты и прошел проверку Роспотребнадзора
-				.equipment_text.equipment_text--4 Подходит всем
+				.equipment_text.equipment_text--4(data-animate-xy="1") Подходит всем
 					span Для любого цветотипа и волосков любой сложности
-				.equipment_img
+				.equipment_img(data-animate-x="0.1")
 					img(src="img/equipment.png", alt="equipment")
 		// /equipment
+
+		// portfolio
+		section.portfolio
+			.portfolio_content
+				.portfolio_slider-for
+					.slider-portfolio-for
+						.slider-portfolio-for_slide 01/3
+						.slider-portfolio-for_slide 02/3
+						.slider-portfolio-for_slide 03/3
+				h2.portfolio_title НАШИ РАБОТЫ
+				.portfolio_nav
+					.slider-portfolio_btn.slider-portfolio_btn--prev
+						span &larr;
+					.slider-portfolio_btn.slider-portfolio_btn--next
+						span &rarr;
+				.portfolio_img
+					img(src="img/portfolio-1.png", alt="image")
+			.portfolio_img2
+				img(src="img/portfolio-2.png", alt="image")
+			.portfolio_slider
+				.slider-portfolio
+					.slider-portfolio_slide
+						.slider-portfolio_slide-block
+							input#check-img-1(type="checkbox")
+							img(src="img/portfolio/slide-1-prev.png", alt="image" data-time="prev")
+							img(src="img/portfolio/slide-1-next.png", alt="image" data-time="next")
+							label(for="check-img-1").slider-portfolio_toggle
+								span.slider-portfolio_text БЫЛО
+								span.slider-portfolio_check
+									span.slider-portfolio_line
+									span.slider-portfolio_circle
+								span.slider-portfolio_text СТАЛО
+					.slider-portfolio_slide
+						.slider-portfolio_slide-block
+							input#check-img-2(type="checkbox")
+							img(src="img/portfolio/slide-1-prev.png", alt="image" data-time="prev")
+							img(src="img/portfolio/slide-1-next.png", alt="image" data-time="next")
+							label(for="check-img-2").slider-portfolio_toggle
+								span.slider-portfolio_text БЫЛО
+								span.slider-portfolio_check
+									span.slider-portfolio_line
+									span.slider-portfolio_circle
+								span.slider-portfolio_text СТАЛО
+					.slider-portfolio_slide
+						.slider-portfolio_slide-block
+							input#check-img-3(type="checkbox")
+							img(src="img/portfolio/slide-1-prev.png", alt="image" data-time="prev")
+							img(src="img/portfolio/slide-1-next.png", alt="image" data-time="next")
+							label(for="check-img-3").slider-portfolio_toggle
+								span.slider-portfolio_text БЫЛО
+								span.slider-portfolio_check
+									span.slider-portfolio_line
+									span.slider-portfolio_circle
+								span.slider-portfolio_text СТАЛО
+		// /portfolio
+
+		// faq
+		section.faq
+			.faq_block
+				img(src="img/flower-1.png", alt="flower").faq_img-1
+				img(src="img/flower-2.png", alt="flower").faq_img-2
+				img(src="img/branch-1.png", alt="branch").faq_img-3
+				img(src="img/gallery-model.png", alt="woomen").faq_img-4
+				.faq_block-inner
+					.faq_subblock
+						h2.faq_title ЧАСТЫЕ ВОПРОСЫ
+						.accordeon
+							.accordeon_item
+								.accordeon_trigger Как подготовиться к лазерной эпиляции?
+								.accordeon_content
+									| Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.
+							.accordeon_item
+								.accordeon_trigger Как подготовиться к лазерной эпиляции?
+								.accordeon_content
+									| Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.
+							.accordeon_item
+								.accordeon_trigger Как подготовиться к лазерной эпиляции?
+								.accordeon_content
+									| Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.
+							.accordeon_item
+								.accordeon_trigger Как подготовиться к лазерной эпиляции?
+								.accordeon_content
+									| Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.
+							.accordeon_item
+								.accordeon_trigger Как подготовиться к лазерной эпиляции?
+								.accordeon_content
+									| Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.
+		// /faq
+
+		// gallery
+		<section class="screen_8">
+			<div class="wrapper">
+				<h2 class="title-section">Галерея</h2>
+				<div class="galley_tabs flex align-items-center justify-content-center">
+					<a data-target="gtab_1" class="active">Фото</a>
+					<a data-target="gtab_2">Видео</a>
+				</div>
+			<div id="gtab_1" class="gallery_slider">
+				<div class="ps_arrows flex align-items-center justify-content-between">
+					<a class="prev5"></a>
+					<div class="swiper-pagination sp5"></div>
+					<a class="next5"></a>
+				</div>
+				<div class="swiper5" id="swiper5">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/1.jpg" class="gallery_slide" data-style="background: url('img/gallery/1.jpg') no-repeat;">
+								//- img(src="img/gallery/1.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/2.jpg" class="gallery_slide" data-style="background: url('img/gallery/2.jpg') no-repeat;">
+								//- img(src="img/gallery/2.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/3.jpg" class="gallery_slide" data-style="background: url('img/gallery/3.jpg') no-repeat;">
+								//- img(src="img/gallery/3.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/4.jpg" class="gallery_slide" data-style="background: url('img/gallery/4.jpg') no-repeat;">
+								//- img(src="img/gallery/4.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/5.jpg" class="gallery_slide" data-style="background: url('img/gallery/5.jpg') no-repeat;">
+								//- img(src="img/gallery/5.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/6.jpg" class="gallery_slide" data-style="background: url('img/gallery/6.jpg') no-repeat;">
+								//- img(src="img/gallery/6.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/7.jpg" class="gallery_slide" data-style="background: url('img/gallery/7.jpg') no-repeat;">
+								//- img(src="img/gallery/7.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/8.jpg" class="gallery_slide" data-style="background: url('img/gallery/8.jpg') no-repeat;">
+								//- img(src="img/gallery/8.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/9.jpg" class="gallery_slide" data-style="background: url('img/gallery/9.jpg') no-repeat;">
+								//- img(src="img/gallery/9.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/10.jpg" class="gallery_slide" data-style="background: url('img/gallery/10.jpg') no-repeat;">
+								//- img(src="img/gallery/10.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/11.jpg" class="gallery_slide" data-style="background: url('img/gallery/11.jpg') no-repeat;">
+								//- img(src="img/gallery/11.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/12.jpg" class="gallery_slide" data-style="background: url('img/gallery/12.jpg') no-repeat;">
+								//- img(src="img/gallery/12.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="img/gallery/big/13.jpg" class="gallery_slide" data-style="background: url('img/gallery/13.jpg') no-repeat;">
+								//- img(src="img/gallery/13.jpg", alt="image")
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="gtab_2" class="gallery_slider" style="display: none">
+				<div class="ps_arrows flex align-items-center justify-content-between">
+					<a class="prev7"></a>
+					<div class="swiper-pagination sp7"></div>
+					<a class="next7"></a>
+				</div>
+				<div class="swiper7" id="swiper7">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<a data-fancybox href="https://player.vimeo.com/video/307084093?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb1.jpg') no-repeat center;">
+								//- img(src="img/thumb1.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="https://player.vimeo.com/video/307083213?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb2.jpg') no-repeat center;">
+								//- img(src="img/thumb2.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="https://player.vimeo.com/video/307086886?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb3.jpg') no-repeat center;">
+								//- img(src="img/thumb3.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="https://player.vimeo.com/video/307088149?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb4.jpg') no-repeat center;">
+								//- img(src="img/thumb4.jpg", alt="image")
+							</a>
+						</div>
+						<div class="swiper-slide">
+							<a data-fancybox href="https://player.vimeo.com/video/308186072?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb5.jpg') no-repeat center;">
+								//- img(src="img/thumb5.jpg", alt="image")
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		// /gallery
+
+		// comments
+		section.comments
+			h2.title-section Отзывы
+			.comments_slider
+				.slider-comments_btn.slider-comments_btn--prev
+					span &larr;
+				.slider-comments
+					.slider-comments_slide
+						.slider-comments_img
+							img(src="img/comment-1.png", alt="image")
+						.slider-comments_title “Забыла что такое брить ноги!”
+						p.slider-comments_text На самом деле все очень понравилось,начиная от сервиса и заканчиваю подходом специалиста  к процессу эпиляции. Сначала с ним проконсультировалась,специалист ответил на все вопросы.
+						.slider-comments_name Мария Машенька
+					.slider-comments_slide
+						.slider-comments_img
+							img(src="img/comment-1.png", alt="image")
+						.slider-comments_title “Забыла что такое брить ноги!”
+						p.slider-comments_text На самом деле все очень понравилось,начиная от сервиса и заканчиваю подходом специалиста  к процессу эпиляции. Сначала с ним проконсультировалась,специалист ответил на все вопросы.
+						.slider-comments_name Мария Машенька
+					.slider-comments_slide
+						.slider-comments_img
+							img(src="img/comment-1.png", alt="image")
+						.slider-comments_title “Забыла что такое брить ноги!”
+						p.slider-comments_text На самом деле все очень понравилось,начиная от сервиса и заканчиваю подходом специалиста  к процессу эпиляции. Сначала с ним проконсультировалась,специалист ответил на все вопросы.
+						.slider-comments_name Мария Машенька
+				.slider-comments_btn.slider-comments_btn--next
+					span &rarr;
+			.comments_img
+				img(src="img/flower-3.png", alt="image")
+		// /comments
 			
 		include blocks/footer.jade
 
 block js
 	script(src="js/jquery-3.2.1.min.js")
-	//- script(src="js/jquery.fancybox.min.js")
+	script(src="js/jquery.fancybox.min.js")
 	script(src="js/slick.min.js")
 	//- script(src="js/jquery.matchHeight-min.js")
 	//- script(src="js/jquery.inputmask.bundle.min.js")
@@ -416,7 +658,8 @@ block js
 	//- script(src="js/autosize.min.js")
 	//- script(src="js/tooltipster.bundle.min.js")
 	//- script(src="js/jquery.mmenu.all.js")
-	//- script(src="js/wow.min.js")
+	script(src="js/wow.min.js")
 	//- script(src="js/fullpage.min.js")
 	script(src="js/twinmax.min.js")
+	script(src="js/swiper.jquery.min.js")
 	script(src="js/script.js")
