@@ -1,56 +1,22 @@
-// Jade
-// .slider-nav
-// 	div
-// 	div
-// 	div
-// .slider-for
-// 	div
-// 	div
-// 	div
-
-// $('.slider-for').slick({
-//   slidesToShow: 1, // Сколько слайдов показывать на экране
-//   slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-//   dots: false, // Пагинация
-//   arrows: false, // Стрелки
-//   fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
-//   asNavFor: '.slider-nav' // Связь со слайдерами
-// });
-
 function sliderInit(slider) {
   slider.slick({
     slidesToShow: 2, // Сколько слайдов показывать на экране
     slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    // asNavFor: '.slider-for', // Связь со слайдерами
     dots: true, // Пагинация
     arrows: false, // Стрелки
     speed: 500, // Скорость перехода слайдов
-    // autoplay: false, // Автопрокрутка
-    // autoplaySpeed: 2000, // Скорость автопрокрутки
-    // focusOnSelect: true, // Выбрать слайд кликом
     infinite: false, // Зацикленное пролистывание
-    // vertical: false, // Вертикальный слайдер
-    // rtl: false, // Слайды листаются справа налево
-    // centerMode: false, // Включить center mode, чтоб увидеть часть крайних слайдов
-    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
     // responsive: [ // Адаптация
     //   {
-    //   breakpoint: 992,
+    //   breakpoint: 768,
     //     settings: {
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //   breakpoint: 720,
-    //     settings: {
-    //       arrows: false,
+    //       slidesToShow: 1,
     //     }
     //   }
     // ]
-    // lazyLoad: 'on
   });
+
+
 
   // Кастомные кнопки "вперед" "назад"
   $('.select-zone_arrow--prev').click(function() {
@@ -60,43 +26,74 @@ function sliderInit(slider) {
     slider.slick('slickNext');
   });
 };
-sliderInit($('#slider-zone-1'));
+
+function sliderInitMobile(slider) {
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: true, // Пагинация
+    arrows: false, // Стрелки
+    speed: 500, // Скорость перехода слайдов
+    infinite: false, // Зацикленное пролистывание
+    // responsive: [ // Адаптация
+    //   {
+    //   breakpoint: 768,
+    //     settings: {
+    //       slidesToShow: 1,
+    //     }
+    //   }
+    // ]
+  });
+
+  
+
+  // Кастомные кнопки "вперед" "назад"
+  $('.select-zone_arrow--prev').click(function() {
+    slider.slick('slickPrev');
+  });
+  $('.select-zone_arrow--next').click(function() {
+    slider.slick('slickNext');
+  });
+};
+
+function sliderInitSelectzoneMobile(slider, sliderFor) {
+  sliderFor.slick({
+  slidesToShow: 1, // Сколько слайдов показывать на экране
+  slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+  dots: false, // Пагинация
+  arrows: false, // Стрелки
+  fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
+  asNavFor: slider, // Связь со слайдерами
+  swipe: false,
+  adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
+});
+
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    asNavFor: sliderFor, // Связь со слайдерами
+    dots: false, // Пагинация
+    arrows: false, // Стрелки
+    infinite: true, // Зацикленное пролистывание
+  });
+
+  // Кастомные кнопки "вперед" "назад"
+  $('.select-zone_controll--prev').click(function() {
+    slider.slick('slickPrev');
+  });
+  $('.select-zone_controll--next').click(function() {
+    slider.slick('slickNext');
+  });
+};
 
 function sliderInitWorkers(slider) {
   slider.slick({
     slidesToShow: 1, // Сколько слайдов показывать на экране
     slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    // asNavFor: '.slider-for', // Связь со слайдерами
     dots: true, // Пагинация
     arrows: false, // Стрелки
-    // speed: 500, // Скорость перехода слайдов
-    // autoplay: false, // Автопрокрутка
-    // autoplaySpeed: 2000, // Скорость автопрокрутки
-    // centerMode: false, // Задает класс .slick-center слайду в центре
-    // focusOnSelect: true, // Выбрать слайд кликом
     infinite: false, // Зацикленное пролистывание
-    // vertical: false, // Вертикальный слайдер
-    // rtl: false, // Слайды листаются справа налево
-    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
-    // responsive: [ // Адаптация
-    //   {
-    //   breakpoint: 992,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //   breakpoint: 720,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   }
-    // ]
-    // lazyLoad: 'on
   });
-  // slider.slick('slickGoTo',1);
 
   // Кастомные кнопки "вперед" "назад"
   $('.slider-workers_btn--prev').click(function() {
@@ -106,7 +103,6 @@ function sliderInitWorkers(slider) {
     slider.slick('slickNext');
   });
 };
-sliderInitWorkers($('.slider-workers'));
 
 function sliderInitPortfolio(slider, sliderFor) {
   sliderFor.slick({
@@ -124,34 +120,11 @@ function sliderInitPortfolio(slider, sliderFor) {
     asNavFor: sliderFor, // Связь со слайдерами
     dots: false, // Пагинация
     arrows: false, // Стрелки
-    // speed: 500, // Скорость перехода слайдов
-    // autoplay: false, // Автопрокрутка
-    // autoplaySpeed: 2000, // Скорость автопрокрутки
     centerMode: true, // Задает класс .slick-center слайду в центре
     focusOnSelect: true, // Выбрать слайд кликом
     infinite: true, // Зацикленное пролистывание
-    // vertical: false, // Вертикальный слайдер
-    // rtl: false, // Слайды листаются справа налево
     centerPadding: '33em', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-    // variableWidth: true, // Подгоняет ширину слайдов под размер элемента,
-    // responsive: [ // Адаптация
-    //   {
-    //   breakpoint: 992,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //   breakpoint: 720,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   }
-    // ]
-    // lazyLoad: 'on
   });
-  // slider.slick('slickGoTo',1);
 
   // Кастомные кнопки "вперед" "назад"
   $('.slider-portfolio_btn--prev span').click(function() {
@@ -161,43 +134,15 @@ function sliderInitPortfolio(slider, sliderFor) {
     slider.slick('slickNext');
   });
 };
-sliderInitPortfolio($('.slider-portfolio'), $('.slider-portfolio-for'));
 
 function sliderInitComments(slider) {
   slider.slick({
     slidesToShow: 1, // Сколько слайдов показывать на экране
     slidesToScroll: 1, // Сколько слайдов пролистывать за раз
-    // asNavFor: '.slider-for', // Связь со слайдерами
-    dots: false, // Пагинация
+    dots: true, // Пагинация
     arrows: false, // Стрелки
-    // speed: 500, // Скорость перехода слайдов
-    // autoplay: false, // Автопрокрутка
-    // autoplaySpeed: 2000, // Скорость автопрокрутки
-    // centerMode: false, // Задает класс .slick-center слайду в центре
-    // focusOnSelect: true, // Выбрать слайд кликом
     infinite: true, // Зацикленное пролистывание
-    // vertical: false, // Вертикальный слайдер
-    // rtl: false, // Слайды листаются справа налево
-    // centerPadding: '0px', // Отступы слева и справа чтоб увидеть часть крайних слайдов
-    // adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
-    // variableWidth: false, // Подгоняет ширину слайдов под размер элемента,
-    // responsive: [ // Адаптация
-    //   {
-    //   breakpoint: 992,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   },
-    //   {
-    //   breakpoint: 720,
-    //     settings: {
-    //       arrows: false,
-    //     }
-    //   }
-    // ]
-    // lazyLoad: 'on
   });
-  // slider.slick('slickGoTo',1);
 
   // Кастомные кнопки "вперед" "назад"
   $('.slider-comments_btn--prev').click(function() {
@@ -207,6 +152,55 @@ function sliderInitComments(slider) {
     slider.slick('slickNext');
   });
 };
+
+function sliderInitAdvantages(slider) {
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: true, // Пагинация
+    arrows: false, // Стрелки
+    infinite: true, // Зацикленное пролистывание
+  });
+
+  // Кастомные кнопки "вперед" "назад"
+  $('.slider-adventages_btn--prev').click(function() {
+    slider.slick('slickPrev');
+  });
+  $('.slider-adventages_btn--next').click(function() {
+    slider.slick('slickNext');
+  });
+};
+
+function sliderInitSet(slider) {
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: true, // Пагинация
+    arrows: false, // Стрелки
+    infinite: true, // Зацикленное пролистывание
+  });
+};
+
+// Инициализация слайдеров
+sliderInitWorkers($('.slider-workers'));
+sliderInitPortfolio($('.slider-portfolio'), $('.slider-portfolio-for'));
 sliderInitComments($('.slider-comments'));
 
-// $('.your-slider').slick('unslick'); // Уничтожить слайдер
+function slidersResize() {
+  if (window.matchMedia("(max-width: 768px)").matches) {
+    $('.slick-initialized').slick('unslick');
+    $('.slider-zone').each(function() {
+      sliderInitMobile($(this));
+    });
+    sliderInitSelectzoneMobile($('#select-zone-trigger'), $('.select-zone_content'));
+    sliderInitAdvantages($('.slider-adventages'));
+    sliderInitSet($('.set_row'));
+  }
+  else {
+    $('.slick-initialized').slick('unslick');
+    $('.slider-zone').each(function() {
+      sliderInit($(this));
+    });
+  }
+};
+slidersResize();

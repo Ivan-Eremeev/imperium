@@ -1,0 +1,78 @@
+// equipment
+.equipment {
+	padding: 1em 0em 1em 0em;
+	&_block {
+		width: 78em;
+		padding: 2.7em 1em 1em 1em;
+		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		text-align: center;
+		color: $pink;
+	}
+	&_name {
+		font-size: 2.2em;
+		font-weight: bold;
+	}
+	&_text {
+		width: 13em;
+		font-size: 1.5em;
+		position: absolute;
+		z-index: 2;
+		span {
+			margin-top: 0.5em;
+			display: block;
+			font-size: 0.8em;
+		}
+		&:after {
+			content: '';
+			display: block;
+			width: 6em;
+			height: 6em;
+			background-size: cover;
+			position: absolute;
+			top: 50%;
+			transform: translate(0,-50%);
+		}
+		&--1 {
+			top: 6em;
+			left: 3em;
+			&:after {
+				background-image: url(../img/equipment-icon-1.png);
+				right: -5em;
+			}
+		}
+		&--2 {
+			top: 6em;
+			left: 35.5em;
+			&:after {
+				background-image: url(../img/equipment-icon-2.png);
+				left: -5em;
+			}
+		}
+		&--3 {
+			top: 16em;
+			left: 2em;
+			&:after {
+				background-image: url(../img/equipment-icon-3.png);
+				right: -5em;
+			}
+		}
+		&--4 {
+			top: 16em;
+			left: 37.5em;
+			&:after {
+				background-image: url(../img/equipment-icon-4.png);
+				left: -5em;
+			}
+		}
+	}
+	&_img {
+		position: relative;
+		z-index: 1;
+		img {
+			width: 33em;
+		}	
+	}
+}
+// /equipment

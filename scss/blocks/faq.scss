@@ -1,0 +1,57 @@
+// faq
+.faq {
+	padding: 11em 0em 9em 0em;
+	&_block {
+		width: 63em;
+		margin-left: auto;
+		margin-right: auto;
+		position: relative;
+	}
+	&_block-inner {
+		padding: 0.5em;
+		border: 0.3em solid #aeaeae;
+		background-color: #fff;
+		position: relative;
+		z-index: 2;
+	}
+	&_img-1 {
+		position: absolute;
+		width: 21em;
+		bottom: -2em;
+		right: -14em;
+		z-index: 3;
+	}
+	&_img-2 {
+		position: absolute;
+		width: 21em;
+		top: -13em;
+		right: 1em;
+		z-index: 3;
+	}
+	&_img-3 {
+		position: absolute;
+		width: 21em;
+		top: -2em;
+		left: -9em;
+		z-index: 1;
+	}
+	&_img-4 {
+		position: absolute;
+		width: 43em;
+		left: -28em;
+		bottom: -12em;
+		z-index: 3;
+	}
+	&_subblock {
+		border: 0.1em solid #aeaeae;
+		padding-top: 1.2em;
+	}
+	&_title {
+		margin-bottom: 0.3em;
+		font-size: 2.7em;
+		font-weight: 500;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+// /faq

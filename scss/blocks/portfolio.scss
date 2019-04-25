@@ -1,0 +1,158 @@
+// portfolio
+.portfolio {
+	padding: 14em 0em 13em 0em;
+	position: relative;
+	&_content {
+		width: 22em;
+		padding: 1em 1em 1em 1em;
+		position: absolute;
+		top: 15.5em;
+		left: 26em;
+		z-index: 2;
+	}
+	&_slider-for {
+
+	}
+	&_title {
+		margin-bottom: 0.4em;
+		font-size: 5em;
+		font-weight: 500;
+		color: $pink;
+	}
+	&_nav {
+
+	}
+	&_img {
+		img {
+			width: 19em;
+		}
+	}
+	&_img2 {
+		position: absolute;
+		top: 8em;
+		right: 31em;
+		z-index: 1;
+		img {
+			width: 11em;
+		}
+	}
+	&_slider {
+
+	}
+}
+.slider-portfolio {
+	position: relative;
+	z-index: 1;
+	&_btn {
+		font-size: 3.3em;
+		span {
+			display: inline-block;
+			cursor: pointer;
+		}
+		&--prev {
+
+		}
+		&_next {
+
+		}
+	}
+	&_slide {
+		height: 100%;
+		text-align: center;
+	}
+	&_slide-block {
+		display: inline-block;
+		width: 26em;
+		position: relative;
+		img {
+			&[data-time="next"] {
+				display: none;
+			}
+		}
+	}
+	&_toggle {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		position: absolute;
+		left: 50%;
+		bottom: 1em;
+		transform: translate(-50%,0);
+	}
+	&_text {
+		display: block;
+		font-size: 1.7em;
+		color: #fff;
+		font-weight: 500;
+	}
+	&_check {
+		display: block;
+		position: relative;
+		margin: 0 1em;
+	}
+	&_line {
+		display: block;
+		width: 4em;
+		height: 0.25em;
+		background-color: #fff;
+		border-radius: 5em;
+	}
+	&_circle {
+		display: block;
+		width: 1.3em;
+		height: 1.3em;
+		background-color: $pink;
+		border-radius: 50%;
+		border: 0.3em solid #fff;
+		position: absolute;
+		top: 50%;
+		left: -0.5em;
+		transform: translate(0,-50%);
+		transition: 0.5s;
+	}
+	label {
+		cursor: pointer;
+	}
+	input[type=checkbox] {
+		display: none;
+		&:checked {
+			~ .slider-portfolio_toggle {
+					.slider-portfolio_check {
+						.slider-portfolio_circle {
+						left: 85%;
+					}
+				}
+			}
+			~ img {
+				&[data-time="prev"] {
+					display: none;
+				}
+				&[data-time="next"] {
+					display: block;
+				}
+			}
+		}
+	}
+	.slick-center {
+		.slider-portfolio_slide-block {
+			width: 29.3em;
+			margin-left: 9em;
+			position: relative;
+			img {
+				width: 100%;
+			}
+		}
+	}
+	.slick-track {
+		display: flex;
+		align-items: center;	
+	}
+}
+.slider-portfolio-for {
+	&_slide {
+		margin-bottom: 1em;
+		font-size: 3em;
+		font-weight: 500;
+	}
+}
+// /portfolio

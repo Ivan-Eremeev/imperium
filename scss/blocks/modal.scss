@@ -1,7 +1,5 @@
 .modal {
-	width: 100%;
-	max-width: 600px;
-	padding: 20px;
+	width: 50em;
 	position: fixed;
 	top: 50%;
 	left: 50%;
@@ -15,43 +13,85 @@
 	}
 	&_content {
 		position: relative;
-		padding: 30px;
-		background-color: #666;
-		box-shadow: 5px 5px 11px 0px rgba(0, 0, 0, 0.3);
-		border-radius: 5px;
+		padding: 2em;
+		background-color: #fff;
+	}
+	&_logo {
+		text-align: center;
+		margin-bottom: 2em;
+		img {
+			width: 19.3em;
+		}
+	}
+	&_form {
+
+	}
+	&_block {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 1em;
+	}
+	&_input {
+		padding: 0.8em;
+		width: 47%;
+		background-color: #7B80FE;
+		border: none;
+		font-size: 2em;
 		color: #fff;
+		&::placeholder {
+			color: #fff;
+		}
+	}
+	&_text {
+		width: 28em;
+		font-size: 1.3em;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		margin-bottom: 1em;
+	}
+	&_btn {
+		text-align: center;
+		button {
+			padding: 0.9em 1.8em;
+			background-color: #FAA036;
+			box-shadow: 0 0 3em 0 rgba(250,160,54,0.35);
+			border: none;
+			outline: none;
+			border-radius: 5em;
+			font-size: 1.8em;
+			color: #fff;
+			cursor: pointer;
+		}
 	}
 	&_close {
-		width: 30px;
-		height: 30px;
-		background-color: #fff;
-		border-radius: 50%;
+		width: 2.7em;
+		height: 2.7em;
 		position: absolute;
-		top: -20px;
-		right: -20px;
+		top: 0em;
+		right: 0em;
 		cursor: pointer;
 		user-select: none;
-		box-shadow: 5px 5px 11px 0px rgba(0, 0, 0, 0.3);
 		&:after {
 			content: '';
 			display: block;
-			width: 15px;
-			height: 2px;
-			background-color: #666;
+			width: 1.3em;
+			height: 0.2em;
+			background-color: #D6D6D6;
 			position: absolute;
-			top: 14px;
-			left: 8px;
+			top: 1.3em;
+			left: 0.7em;
 			transform: rotate(-45deg);
 		}
 		&:before {
 			content: '';
 			display: block;
-			width: 15px;
-			height: 2px;
-			background-color: #666;
+			width: 1.3em;
+			height: 0.2em;
+			background-color: #D6D6D6;
 			position: absolute;
-			top: 14px;
-			left: 8px;
+			top: 1.3em;
+			left: 0.7em;
 			transform: rotate(45deg);
 		}
 	}
@@ -62,7 +102,7 @@
 		bottom: 0;
 		left: 0;
 		right: 0;
-		background-color: rgba(30,30,30,.5);
+		background-color: rgba(30,30,30,.8);
 		z-index: 99;
 		&.open {
 			display: block;

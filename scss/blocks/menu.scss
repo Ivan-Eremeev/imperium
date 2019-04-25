@@ -26,6 +26,33 @@
 			border-color: #ccc;
 		}
 	}
+	&_location {
+		text-align: right;
+		font-size: 0.8em;
+		font-weight: bold;
+	}
+	&_phone {
+		width: 100%;
+		img {
+			width: 1.4em;
+			margin-right: 1em;
+			vertical-align: middle;
+		}
+		a {
+			color: $black;
+		}
+	}
+	&_adress {
+		width: 100%;
+		img {
+			width: 1em;
+			margin-right: 1em;
+			vertical-align: middle;
+		}
+		span {
+
+		}
+	}
 	@media (max-width: $break_sm) {
 		position: relative;
 		z-index: 100;
@@ -170,7 +197,7 @@
 			display: flex;
 			justify-content: center;
 			width: 100%;
-			padding-top: 1em;
+			padding-top: 1.3em;
 			background-color: #fff;
 			z-index: 99;
 			overflow: hidden;

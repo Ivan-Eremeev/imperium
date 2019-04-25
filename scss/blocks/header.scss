@@ -1,0 +1,70 @@
+// header
+.header {
+	&_container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		width: 74em;
+		padding: 0.7em 0;
+		margin-left: auto;
+		margin-right: auto;
+		@media (max-width: $break_sm) {
+			width: auto;
+		}
+	}
+	@media (max-width: $break_sm) {
+		padding: 0em 1em;
+	}
+}
+.logo {
+	img {
+		width: 17.3em;
+	}
+	@media (max-width: $break_sm) {
+		img {
+			width: 12em;
+		}
+	}
+}
+.contacts {
+	padding-top: 0.3em;
+	margin-left: 0.5em;
+	&_line {
+		display: flex;
+		justify-content: flex-end;
+		&--top {
+			align-items: flex-end;
+			margin-bottom: 0.2em;
+		}
+	}
+	&_tel {
+		font-size: 1em;
+		color: $black;
+		text-decoration: none;
+		transition: .1s;
+		font-weight: 900;
+		&:hover {
+			color: $blue;
+		}
+	}
+	&_adress {
+		font-size: 0.85em;
+		font-weight: 900;
+	}
+	&_icon {
+		margin-left: 0.5em;
+		img {
+			width: 1.6em;
+			transition: .3s;
+		}
+		&:hover {
+			img {
+				transform: rotate(360deg);
+			}
+		}
+	}
+	@media (max-width: $break_sm) {
+		
+	}
+}
+// /header

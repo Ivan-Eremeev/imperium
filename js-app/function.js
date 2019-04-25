@@ -73,7 +73,7 @@ $(document).ready(function () {
 	// });
 
 	// Inputmask.js // Маска для поля ввода телефона
-	// $('[name=tel]').inputmask("+9(999)999 99 99",{ showMaskOnHover: false });
+	$('[name=tel]').inputmask("+7(999)999-99-99",{ showMaskOnHover: false });
 
 	// Изменяет размер шрифта у тэга body взависимости от размера экрана (для резиновых страниц)(размеры должны быть в rem)
 	function fontResize() {
@@ -216,21 +216,12 @@ $(document).ready(function () {
 	});
 
 	// Модальное окно
-	// $('.modal-trigger').on('click', function() {
-	// 	var data = $(this).data('modal'),
-	// 			modalOver = $('.modal_over'),
-	// 			modal = $('#modal-' + data);
-	// 	modal.toggleClass('open')
-	// 	.next('.modal_over').toggleClass('open');
-	// 	$('.modal_close').on('click', function() {
-	// 		modal.removeClass('open'),
-	// 		modalOver.removeClass('open');
-	// 	});
-	// 	modalOver.on('click', function() {
-	// 		modal.removeClass('open');
-	// 		modalOver.removeClass('open');
-	// 	});
-	// });
+	$('.modal-trigger').on('click', function() {
+		var modalId = $(this).data('modal');
+		modalOpen(modalId);
+		$('#modal-'+modalId).find('[name=subject]').val($(this).data('title'));
+		console.log($(this).data('title'))
+	});
 
 	// Стилизация полосы прокрутки
 	// $('#scrollbar1').tinyscrollbar({
@@ -393,16 +384,6 @@ $(document).ready(function () {
 	// 	}
 	// });
 
-
-
-	// Слежение за изменением размера окна браузера
-	$(window).resize(function() {
-		fontResize(); // Резиновый сайт
-		// screenHeight(); // Блок с высотой окна браузера
-		// tooltipDisable(); // Отключение всплывающей подсказки
-		// countNumber(); // Анимация увеличения числа
-	});
-
 	// TweenMax.min.js
 	// data-animate-wrap - обертка с плавающими блоками
 	// data-animate-x - блок движется по оси Х
@@ -514,5 +495,170 @@ $(document).ready(function () {
     });
 	};
 	parallaxMove();
+
+	// Карта
+	// ymaps.ready(init);
+	// function init(){ 
+	// 	// Создание карты.    
+	// 	var myMap = new ymaps.Map("map", {
+	// 	// Координаты центра карты.
+	// 	// Порядок по умолчанию: «широта, долгота».
+	// 	// Чтобы не определять координаты центра карты вручную,
+	// 	// воспользуйтесь инструментом Определение координат.
+	// 		center: [55.755307068975505,37.65578650000002],
+	// 	// Уровень масштабирования. Допустимые значения:
+	// 	// от 0 (весь мир) до 19.
+	// 	zoom: 17,
+	// 	controls: ['typeSelector']
+	// 	}),
+	// 	MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+ //        '<div style="color: #2e2e2e; font-size: 1em; font-weight: bold; background: #fff; width: 8em; border-radius: 0.2em">$[properties.iconContent]<span style="display: block; color: #767676;">До 21:00</span></div>'
+ //    ),
+
+ //    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+ //        iconContent: 'Imperiumclinic'
+ //    }, {
+ //        // Опции.
+ //        // Необходимо указать данный тип макета.
+ //        iconLayout: 'default#imageWithContent',
+ //        // Своё изображение иконки метки.
+ //        iconImageHref: 'img/point-map.png',
+ //        // Размеры метки.
+ //        iconImageSize: [45, 60],
+ //        // Смещение левого верхнего угла иконки относительно
+ //        // её "ножки" (точки привязки).
+ //        iconImageOffset: [-25, -70],
+ //        // Смещение слоя с содержимым относительно слоя с картинкой.
+ //        iconContentOffset: [50, 10],
+ //        // Макет содержимого.
+ //        iconContentLayout: MyIconContentLayout
+ //    });
+ //    myMap.geoObjects
+	//     .add(myPlacemark);
+	// };
+
+	// formSubmit();
+
+	// Слежение за изменением размера окна браузера
+	$(window).resize(function() {
+		fontResize(); // Резиновый сайт
+		// screenHeight(); // Блок с высотой окна браузера
+		// tooltipDisable(); // Отключение всплывающей подсказки
+		// countNumber(); // Анимация увеличения числа
+		slidersResize();
+	});
 	
 });
+
+// Простая проверка форм на заполненность и отправка аяксом
+	// function formSubmit() {
+ //    $("[type=submit]").on('click', function (e){ 
+ //      e.preventDefault();
+ //      // Заводим переменные
+ //      // Ищем родительскую фору для того чтобы манипулировать элементами находящимися только внутри неё
+ //      var form = $(this).closest('form');
+ //      // Запоминаем путь к php обработчику формы
+ //      var url = form.attr('action');
+ //      // Собираем все данные с полей формы для отправки
+ //      var form_data = form.serialize();
+ //      // Выбираем все обязательные поля по атрибуту required
+ //      var field = form.find('[required]');
+
+ //      // Задаем количество пустых полей по умолчанию
+ //      var empty = 0;
+
+ //      // Перебираем каждое обязательное поле
+ //      field.each(function() {
+ //          // Если поля пустые
+ //          if ($(this).val() == "") {
+ //              // Добавляем класс invalid
+ //              $(this).addClass('invalid');
+ //              // Увеличиваем счеткик пустых полей
+ //              empty++;
+ //          // Если поля не пустые
+ //          } else {
+ //              // Убираем класс invalid
+ //              $(this).removeClass('invalid');
+ //              // Добавляем класс valid если необходимо для стилизации
+ //              $(this).addClass('valid');
+ //          }  
+ //      });
+
+ //      // Можно проверить пересчет пустых полей в консоли
+ //      // console.log(empty);
+ //      console.log(form_data);
+
+ //      // Если пустых полей больше 0
+ //      if (empty > 0) {
+ //      	$('.modal_message').text('Не заполнены поля');
+ //      	setTimeout(function() {
+ //      		$('.modal_message').text('');
+ //      	}, 5000);
+ //          // Останавливаем работу скрипта запрещая отправку формы
+ //          return false;
+ //      // Если пустых полей нет
+ //      } else {        
+ //          // Запускаем отправку формы без перезагрузки страницы
+ //          $.ajax({
+ //              // Используем переменные в параметрах для отправки формы
+ //              url: url,
+ //              type: "POST",
+ //              dataType: "html",
+ //              data: form_data,
+ //              // При успешной отправке
+ //              // В аргумент response(произвольное название) можно записать и видеть результат ответа сервера
+ //              success: function (response) {
+ //                  console.log(response);
+ //                  form.closest('.modal').find('.modal_close').trigger('click');
+ //                  modalOpen('successModal');
+ //                  // Дальше несколько вариантов
+ //                  // Открываем окно с сообщением
+ //                  // $('#success').modal('show');
+ //                  // Открываем какую то страницу. как правило так называемую "страницу спасибо"
+ //                  // document.location.href = "success.html";
+ //              },
+ //              // При ошибке отправки
+ //              error: function (response) {
+ //                  console.log(response);
+ //                  // Тоже что нибудь делаем
+ //                  // $('#success').modal('show');
+ //                  // Выводим в заготовленный блок какое то сообщение
+ //                  // $('#rezult').text('Проверте корректность заполнения полей формы.');
+ //              }
+ //          });
+ //      }
+
+ //  });
+ //  // Убираем класс invalid при снятии фокуса если поле не пустое
+ //  $('[required]').on('blur', function() {
+ //      if ($(this).val() != '') {
+ //          $(this).removeClass('invalid');
+ //      }
+ //  });
+ //  // Если есть чекбокс политикой можно отключать кнопку при снятом чекбоксе добавляя к кнопке атрибут disabled 
+ //  $('.form__privacy input').on('change', function(event) {
+ //      event.preventDefault();
+ //      var btn = $(this).closest('.form').find('.btn');
+ //      if ($(this).prop('checked')) {
+ //          btn.removeAttr('disabled');
+ //          // console.log('checked');
+ //      } else {
+ //          btn.attr('disabled', true);
+ //      }
+ //  });
+	// };
+
+function modalOpen(selectorId) {
+	var modalOver = $('.modal_over'),
+			modal = $('#modal-' + selectorId);
+	modal.toggleClass('open')
+	.next('.modal_over').toggleClass('open');
+	$('.modal_close').on('click', function() {
+		modal.removeClass('open'),
+		modalOver.removeClass('open');
+	});
+	modalOver.on('click', function() {
+		modal.removeClass('open');
+		modalOver.removeClass('open');
+	});
+}

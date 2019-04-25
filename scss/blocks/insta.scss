@@ -1,0 +1,122 @@
+// insta
+.insta {
+	padding: 2em 0em 0em 0em;
+	background-color: #F7F7FF;
+	.title-section {
+		font-weight: 600;
+		margin-bottom: 0.2em;
+	}
+	&_adress {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 6em;
+	}
+	&_icon {
+		display: inline-block;
+		width: 4em;
+		height: 4em;
+		background-image: url(../img/insta-icon-2.png);
+		background-size: cover;
+		vertical-align: middle;
+		&--small {
+			width: 1.5em;
+			height: 1.5em;
+			margin-right: 1em;
+		}
+	}
+	&_name {
+		display: inline-block;
+		font-size: 1.5em;
+		font-weight: 600;
+		color: $black;
+		vertical-align: middle;
+		&--item {
+			display: block;
+			margin-top: 1em;
+		}
+	}
+	&_row {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 7em;
+		margin-bottom: 6em;
+	}
+	&_col {
+
+	}
+	&_item {
+		position: relative;
+		padding-right: 1em;
+		&:hover {
+			> .insta_over {
+				opacity: 1;
+			}
+		}
+	}
+	&_block {
+		padding: 0.7em 1em 0.7em 1em;
+		background-color: #FFDEEC;
+	}
+	&_img {
+		margin-right: -1.5em;
+		img {
+			display: block;
+			width: 17.5em;
+		}
+	}
+	&_over {
+		padding-top: 7em;
+		background-color: rgba(255,255,255,0.5);
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		text-align: center;
+		opacity: 0;
+	}
+}
+.contacts-footer {
+	display: flex;
+	background-color: #F6F6F6;
+	overflow: hidden;
+	&_content {
+		width: 39%;
+		padding: 3.7em 6em;
+	}
+	&_list {
+		padding-left: 4.3em;
+	}
+	&_item {
+		font-size: 1.4em;
+		font-weight: 600;
+		margin-bottom: 1.5em;
+		position: relative;
+		span {
+			display: block;
+			margin-top: 0.7em;
+			font-size: 1.2em;
+			font-weight: normal;
+			&.center {
+				margin-top: 0em;
+				line-height: 0.6em;
+				text-align: center;
+			}
+		}
+	}
+	&_icon {
+		width: 1.5em;
+		position: absolute;
+		left: -3em;
+		top: 0em;
+	}
+	&_link {
+		color: $black;
+	}
+	&_map {
+		width: 61%;
+		box-shadow: 0 0 2.875rem rgba(0, 0, 0, 0.29);
+	}
+}
+// /insta

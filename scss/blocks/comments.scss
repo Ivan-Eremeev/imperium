@@ -1,0 +1,106 @@
+// comments
+.comments {
+	padding: 8.4em 0em 15.5em 0em;
+	background-image: url(../img/comments-bg.png);
+	background-size: cover;
+	position: relative;
+	.title-section {
+		margin-bottom: 0.45em;
+	}
+	&_slider {
+		max-width: 46em;
+		margin-left: auto;
+		margin-right: auto;
+		box-shadow: 0 0 1.5rem rgba(0, 0, 0, 0.29);
+		background-color: #f6f6f6;
+		position: relative;
+	}
+	&_img {
+		position: absolute;
+		right: 0;
+		bottom: -1em;
+		img {
+			width: 36em;
+		}
+	}
+}
+.slider-comments {
+	&_slide {
+		padding: 1.6em 4em;
+		text-align: center;
+		position: relative;
+	}
+	&_img {
+		margin-bottom: 0.6em;
+		img {
+			display: inline-block;
+			width: 7.5em;
+		}
+	}
+	&_title {
+		font-size: 1.75em;
+		font-weight: 600;
+		margin-bottom: 0.6em;
+	}
+	&_text {
+		font-size: 1.3em;
+		line-height: 1.7em;
+		margin-bottom: 1.7em;
+	}
+	&_name {
+			font-size: 1.3em;
+			font-weight: 600;
+	}
+	&_btn {
+		width: 3.5em;
+		height: 3.5em;
+		background-color: #fff;
+		border-radius: 50%;
+		box-shadow: 0 0 0.375rem 0.063rem rgba(0, 0, 0, 0.11);
+		position: absolute;
+		top: 50%;
+		transform: translate(0,-50%);
+		transition: .3s;
+		cursor: pointer;
+		&:hover {
+			background-color: $pink;
+			color: #fff;
+		}
+		&--prev {
+			left: -5em;
+		}
+		&--next {
+			right: -5em;
+		}
+		span {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			font-size: 2em;
+		}
+	}
+	.slick-dots {
+		position: absolute;
+		left: 50%;
+		bottom: -2em;
+		transform: translate(-50%,0);
+		display: flex;
+		button {
+			width: 8px;
+			height: 8px;
+			margin: 0 4px;
+			border: none;
+			outline: none;
+			border-radius: 50%;
+			background-color: #E6E6FD;
+			font-size: 0;
+		}
+		.slick-active {
+			button {
+				background-color: $pink;
+			}
+		}
+	}
+}
+// /comments

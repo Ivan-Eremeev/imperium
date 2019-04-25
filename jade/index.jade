@@ -11,13 +11,16 @@ block content
 		section.first-screen#scroll
 			.first-screen_content
 				h1.first-screen_title лазерная эпиляция 
+					span.mobile-visible любого участка тела 
+
 				.first-screen_text от 400 рублей <br>с гарантией результата!
 				.first-screen_btn
-					a(href="#").first-screen_link Выбрать ЗОНУ УДАЛЕНИЯ ВОЛОС!
+					a(href="https://n164361.yclients.com/company:77426/idx:0/service" target="_blank").first-screen_link Выбрать ЗОНУ УДАЛЕНИЯ ВОЛОС!
 			.first-screen_img(data-animate-wrap)
-				img(src="img/woomen-first.png", alt="woomen" data-animate-x="0.1").first-screen_woomen
-				img(src="img/circle-1.png", alt="circle" data-animate-x="0.05").first-screen_circle-1
-				img(src="img/circle-2.png", alt="circle" data-animate-x="0.05").first-screen_circle-2
+				img(src="img/woomen-first.png", alt="woomen" data-animate-x="0.1").first-screen_woomen.mobile-hide
+				img(src="img/circle-1.png", alt="circle" data-animate-x="0.05").first-screen_circle-1.mobile-hide
+				img(src="img/circle-2.png", alt="circle" data-animate-x="0.05").first-screen_circle-2.mobile-hide
+				img(src="img/woomen-first-mob.png", alt="woomen").first-screen_woomen.mobile-visible
 				.first-screen_subtext.first-screen_subtext--1(data-animate-xy="1") Работаем с любыми <br>типами кожи
 				.first-screen_subtext.first-screen_subtext--2(data-animate-xy="1") БЕЗБОЛЕЗНЕННО <br>И АККУРАТНО
 				.first-screen_subtext.first-screen_subtext--3(data-animate-xy="1") На лучшем аппарате <br>в стране
@@ -29,18 +32,32 @@ block content
 		section.select-zone#select-zone
 			h2.title-section Выбери зону
 			.select-zone_tabs.tabs
-				ul.select-zone_trigger.tabs_trigger
+				ul.select-zone_trigger.tabs_trigger.mobile-hide
 					li.select-zone_item.select-zone_item--1.active
 						span ЛИЦО
 					li.select-zone_item.select-zone_item--2
 						span ТЕЛО
 					li.select-zone_item.select-zone_item--3
 						span МУЖСКАЯ ЭПИЛЯЦИЯ
+				.select-zone_controll.select-zone_controll--prev.mobile-visible
+					img(src="img/arrow-next.png" alt="arrow")
+				.select-zone_trigger#select-zone-trigger.mobile-visible
+					div
+						.select-zone_item.select-zone_item--1
+							span ЛИЦО
+					div
+						.select-zone_item.select-zone_item--2
+							span ТЕЛО
+					div
+						.select-zone_item.select-zone_item--3
+							span МУЖСКАЯ ЭПИЛЯЦИЯ
+				.select-zone_controll.select-zone_controll--next.mobile-visible
+					img(src="img/arrow-next.png" alt="arrow")
 				.select-zone_content.tabs_content
 					div.select-zone_block.tabs_block
 						.select-zone_img.select-zone_img--1
 							img(src="img/woomen-face.png", alt="woomen")
-						.select-zone_title EPILATION
+							.select-zone_title.select-zone_title--1 EPILATION
 						.select-zone_slider
 							
 							.select-zone_arrow.select-zone_arrow--prev
@@ -85,9 +102,10 @@ block content
 							.select-zone_arrow.select-zone_arrow--next
 								img(src="img/white-arrow.png", alt="arrow")
 						.select-zone_offer
-							a(href="#").select-zone_btn ЗАПИСАТЬСЯ
-							.select-zone_sale со СКИДКОЙ 30%
-						.zone-face
+							a(href="#").select-zone_btn ЗАПИСАТЬСЯ 
+								span.mobile-visible со СКИДКОЙ 30%
+							.select-zone_sale.mobile-hide со СКИДКОЙ 30%
+						.zone-face.mobile-hide
 							.zone-face_img.zone-face_img--1.active
 								img(src="img/chin.png", alt="chin")
 							.zone-face_img.zone-face_img--2
@@ -106,7 +124,7 @@ block content
 					div.select-zone_block.tabs_block.hide
 						.select-zone_img.select-zone_img--2
 							img(src="img/woomen-body.png", alt="woomen")
-						.select-zone_title EPILATION
+							.select-zone_title.select-zone_title--2 EPILATION
 						.select-zone_slider
 							
 							.select-zone_arrow.select-zone_arrow--prev
@@ -160,13 +178,14 @@ block content
 							.select-zone_arrow.select-zone_arrow--next
 								img(src="img/white-arrow.png", alt="arrow")
 						.select-zone_offer
-							a(href="#").select-zone_btn ЗАПИСАТЬСЯ
-							.select-zone_sale со СКИДКОЙ 30%
+							a(href="#").select-zone_btn ЗАПИСАТЬСЯ 
+								span.mobile-visible со СКИДКОЙ 30%
+							.select-zone_sale.mobile-hide со СКИДКОЙ 30%
 
 					div.select-zone_block.select-zone_block--men.tabs_block.hide
 						.select-zone_img.select-zone_img--3
 							img(src="img/men-apilation.png", alt="men")
-						.select-zone_title MEN`S <br>EPILATION
+							.select-zone_title.select-zone_title--3 MEN`S <br>EPILATION
 						.select-zone_slider
 							
 							.select-zone_arrow.select-zone_arrow--prev
@@ -241,8 +260,9 @@ block content
 							.select-zone_arrow.select-zone_arrow--next
 								img(src="img/white-arrow.png", alt="arrow")
 						.select-zone_offer
-							a(href="#").select-zone_btn.select-zone_btn--men ЗАПИСАТЬСЯ
-							.select-zone_sale со СКИДКОЙ 30%
+							a(href="#").select-zone_btn.select-zone_btn--men ЗАПИСАТЬСЯ 
+								span.mobile-visible со СКИДКОЙ 30%
+							.select-zone_sale.mobile-hide со СКИДКОЙ 30%
 		// /select-zone
 		
 		// advantages
@@ -250,10 +270,50 @@ block content
 			.advantages_box
 				.advantages_block
 					.advantages_img
-						img(src="img/advantages.png", alt="image")
-					h2.advantages_text ЧТО <br>ВАС <br>ЖДЕТ В <br>IMPERIUMCLINIC?
+						img(src="img/advantages.png", alt="image").mobile-hide
+						img(src="img/advantages-mob.png", alt="image").mobile-visible
+					h2.advantages_text.mobile-hide ЧТО <br>ВАС <br>ЖДЕТ В <br>IMPERIUMCLINIC?
+					h2.advantages_text.mobile-visible ЧТО ВАС <br>ЖДЕТ В <br>IMPERIUMCLINIC?
 
-				ul.advantages_list
+				.advantages_slider.mobile-visible
+					.slider-adventages_btn.slider-adventages_btn--prev
+						img(src="img/advantages-arrow.png", alt="arrow")
+					.slider-adventages
+						.slider-adventages_slide
+							.slider-adventages_block
+								.slider-adventages_img
+									img(src="img/adventages-1.jpg", alt="image")
+								.slider-adventages_content
+									.slider-adventages_text Мы предоставляем большой выбор услуг по уходу за вашим телом!
+									ul.slider-adventages_list
+										li.slider-adventages_item Косметологические услуги
+										li.slider-adventages_item Массаж
+										li.slider-adventages_item LPG-массаж
+										li.slider-adventages_item Маникюр
+										li.slider-adventages_item Педикюр
+									.slider-adventages_icon
+										img(src="img/adventages-check.png", alt="icon")
+									.slider-adventages_title Дополнительные услуги
+						.slider-adventages_slide
+							.slider-adventages_block
+								.slider-adventages_img
+									img(src="img/adventages-1.jpg", alt="image")
+								.slider-adventages_content
+									.slider-adventages_text Мы предоставляем большой выбор услуг по уходу за вашим телом!
+									ul.slider-adventages_list
+										li.slider-adventages_item Косметологические услуги
+										li.slider-adventages_item Массаж
+										li.slider-adventages_item LPG-массаж
+										li.slider-adventages_item Маникюр
+										li.slider-adventages_item Педикюр
+									.slider-adventages_icon
+										img(src="img/adventages-check.png", alt="icon")
+									.slider-adventages_title Дополнительные услуги
+					.slider-adventages_btn.slider-adventages_btn--next
+						img(src="img/advantages-arrow.png", alt="arrow")
+
+
+				ul.advantages_list.mobile-hide
 					li.advantages_item Дополнительные услуги
 					li.advantages_item Низкие цены
 					li.advantages_item Удобное месторасположение 
@@ -262,13 +322,14 @@ block content
 					li.advantages_item Отличный сервис
 			.operating-time
 				.operating-time_img(data-animate-wrap)
-					img(src="img/flower.png", alt="flower", data-animate-xy="2")
+					img(src="img/flower.png", alt="flower", data-animate-xy="2").mobile-hide
+					img(src="img/flower-mob.png", alt="flower", data-animate-xy="2").mobile-visible
 				ul.operating-time_list
-					li.operating-time_item.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="0.3s") 10-15 мин
+					li.operating-time_item.wow.fadeInRight(data-wow-duration="1s") 10-15 мин
 						span обработка одной зоны
-					li.operating-time_item.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="0.6s") 30-40 % 
+					li.operating-time_item.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="0.3s") 30-40 % 
 						span волос удалятся после первого сеанса
-					li.operating-time_item.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="0.9s") 5-7
+					li.operating-time_item.wow.fadeInRight(data-wow-duration="1s" data-wow-delay="0.6s") 5-7
 						span сеансов для полного удаления волос
 		// /advantages
 
@@ -284,12 +345,12 @@ block content
 						.set_subtitle НАБОР №1
 						.set_line
 						.set_text ЭПИЛЯЦИЯ
-							span.set_bold-big 2-x
+							span.set_bold-big 2-x 
 							span.set_bold-small ЛЮБЫХ 
 							| зон 
 						.set_bottom-block
 							.set_price 4.490 Р
-							a(href="#").set_btn ЗАПИСАТЬСЯ
+							button.modal-trigger(data-modal="1" data-title="НАБОР №1").set_btn ЗАПИСАТЬСЯ
 				.set_col
 					.set_block
 						.set_subtitle НАБОР №2
@@ -300,7 +361,7 @@ block content
 							| зон
 						.set_bottom-block
 							.set_price 6.490 Р
-							a(href="#").set_btn ЗАПИСАТЬСЯ
+							button.modal-trigger(data-modal="1" data-title="НАБОР №2").set_btn ЗАПИСАТЬСЯ
 						.set_like
 				.set_col
 					.set_block
@@ -313,7 +374,7 @@ block content
 						.set_bottom-block
 							.set_subprice.set_subprice--blue +1 ЗОНА  = 1.000 руб
 							.set_price 7.490 Р
-							a(href="#").set_btn ЗАПИСАТЬСЯ
+							button.modal-trigger(data-modal="1" data-title="НАБОР №3").set_btn ЗАПИСАТЬСЯ
 				.set_col
 					.set_block
 						.set_subtitle.set_subtitle--bold ВСЕ ТЕЛО
@@ -328,7 +389,7 @@ block content
 						.set_bottom-block
 							.set_subprice 16.490 Р
 							.set_price 12.000 Р
-							a(href="#").set_btn ЗАПИСАТЬСЯ
+							button.modal-trigger(data-modal="1" data-title="ВСЕ ТЕЛО").set_btn ЗАПИСАТЬСЯ
 		// /set
 
 		// prize
@@ -338,11 +399,11 @@ block content
 					h2.prize_title ЗАПИСЫВАЙСЯ НА ЭПИЛЯЦИЮ ЛЮБОЙ ЗОНЫ СО СКИДКОЙ 
 					.prize_sale 30%
 				.prize_btn
-					a(href="#").prize_link ЗАПИСАТЬСЯ
+					button.modal-trigger(data-modal="1").prize_link ЗАПИСАТЬСЯ
 		// /prize
 
 		// workers
-		section.workers
+		//- section.workers
 			h2.title-section Наши сотрудники
 			.workers_branch
 				img(src="img/branch.png", alt="branch")
@@ -363,8 +424,10 @@ block content
 									p.slider-workers_text Закончила интернатурe по дерматовенерологии <br>в Первом московском государственном медицинском университете им. И.М.Сеченова , повышение квалификации по косметологии на сертификат врача косметолога
 									p.slider-workers_text Повышение квалификации на базе Моники им М.Владимирского по специальности врач-косметолог.
 									.slider-workers_sertificates
-										img(src="img/sertificate-1.jpg", alt="sertificate")
-										img(src="img/sertificate-2.jpg", alt="sertificate")
+										a(href="img/sertificate-1-full.jpg" data-fancybox)
+											img(src="img/sertificate-1.jpg", alt="sertificate")
+										a(href="img/sertificate-2-full.jpg" data-fancybox)
+											img(src="img/sertificate-2.jpg", alt="sertificate")
 									.slider-workers_emblem
 										img(src="img/emblem.png", alt="emblem")
 						.slider-workers_slide
@@ -388,7 +451,7 @@ block content
 		// /workers
 
 		// equipment
-		section.equipment(data-animate-wrap)
+		//- section.equipment(data-animate-wrap)
 			h2.title-section Наш аппарат
 			.equipment_block
 				.equipment_name(data-animate-x="0.1") DILAS 808-M
@@ -405,7 +468,7 @@ block content
 		// /equipment
 
 		// portfolio
-		section.portfolio
+		//- section.portfolio
 			.portfolio_content
 				.portfolio_slider-for
 					.slider-portfolio-for
@@ -456,11 +519,11 @@ block content
 								span.slider-portfolio_check
 									span.slider-portfolio_line
 									span.slider-portfolio_circle
-								span.slider-portfolio_text СТАЛО
+								//- span.slider-portfolio_text СТАЛО
 		// /portfolio
 
 		// faq
-		section.faq
+		//- section.faq
 			.faq_block
 				img(src="img/flower-1.png", alt="flower").faq_img-1
 				img(src="img/flower-2.png", alt="flower").faq_img-2
@@ -493,130 +556,130 @@ block content
 		// /faq
 
 		// gallery
-		<section class="screen_8">
-			<div class="wrapper">
-				<h2 class="title-section">Галерея</h2>
-				<div class="galley_tabs flex align-items-center justify-content-center">
-					<a data-target="gtab_1" class="active">Фото</a>
-					<a data-target="gtab_2">Видео</a>
-				</div>
-			<div id="gtab_1" class="gallery_slider">
-				<div class="ps_arrows flex align-items-center justify-content-between">
-					<a class="prev5"></a>
-					<div class="swiper-pagination sp5"></div>
-					<a class="next5"></a>
-				</div>
-				<div class="swiper5" id="swiper5">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/1.jpg" class="gallery_slide" data-style="background: url('img/gallery/1.jpg') no-repeat;">
-								//- img(src="img/gallery/1.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/2.jpg" class="gallery_slide" data-style="background: url('img/gallery/2.jpg') no-repeat;">
-								//- img(src="img/gallery/2.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/3.jpg" class="gallery_slide" data-style="background: url('img/gallery/3.jpg') no-repeat;">
-								//- img(src="img/gallery/3.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/4.jpg" class="gallery_slide" data-style="background: url('img/gallery/4.jpg') no-repeat;">
-								//- img(src="img/gallery/4.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/5.jpg" class="gallery_slide" data-style="background: url('img/gallery/5.jpg') no-repeat;">
-								//- img(src="img/gallery/5.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/6.jpg" class="gallery_slide" data-style="background: url('img/gallery/6.jpg') no-repeat;">
-								//- img(src="img/gallery/6.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/7.jpg" class="gallery_slide" data-style="background: url('img/gallery/7.jpg') no-repeat;">
-								//- img(src="img/gallery/7.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/8.jpg" class="gallery_slide" data-style="background: url('img/gallery/8.jpg') no-repeat;">
-								//- img(src="img/gallery/8.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/9.jpg" class="gallery_slide" data-style="background: url('img/gallery/9.jpg') no-repeat;">
-								//- img(src="img/gallery/9.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/10.jpg" class="gallery_slide" data-style="background: url('img/gallery/10.jpg') no-repeat;">
-								//- img(src="img/gallery/10.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/11.jpg" class="gallery_slide" data-style="background: url('img/gallery/11.jpg') no-repeat;">
-								//- img(src="img/gallery/11.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/12.jpg" class="gallery_slide" data-style="background: url('img/gallery/12.jpg') no-repeat;">
-								//- img(src="img/gallery/12.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="img/gallery/big/13.jpg" class="gallery_slide" data-style="background: url('img/gallery/13.jpg') no-repeat;">
-								//- img(src="img/gallery/13.jpg", alt="image")
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="gtab_2" class="gallery_slider" style="display: none">
-				<div class="ps_arrows flex align-items-center justify-content-between">
-					<a class="prev7"></a>
-					<div class="swiper-pagination sp7"></div>
-					<a class="next7"></a>
-				</div>
-				<div class="swiper7" id="swiper7">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<a data-fancybox href="https://player.vimeo.com/video/307084093?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb1.jpg') no-repeat center;">
-								//- img(src="img/thumb1.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="https://player.vimeo.com/video/307083213?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb2.jpg') no-repeat center;">
-								//- img(src="img/thumb2.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="https://player.vimeo.com/video/307086886?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb3.jpg') no-repeat center;">
-								//- img(src="img/thumb3.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="https://player.vimeo.com/video/307088149?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb4.jpg') no-repeat center;">
-								//- img(src="img/thumb4.jpg", alt="image")
-							</a>
-						</div>
-						<div class="swiper-slide">
-							<a data-fancybox href="https://player.vimeo.com/video/308186072?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb5.jpg') no-repeat center;">
-								//- img(src="img/thumb5.jpg", alt="image")
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
+		//- <section class="screen_8">
+		//- 	<div class="wrapper">
+		//- 		<h2 class="title-section">Галерея</h2>
+		//- 		<div class="galley_tabs flex align-items-center justify-content-center">
+		//- 			<a data-target="gtab_1" class="active">Фото</a>
+		//- 			<a data-target="gtab_2">Видео</a>
+		//- 		</div>
+		//- 	<div id="gtab_1" class="gallery_slider">
+		//- 		<div class="ps_arrows flex align-items-center justify-content-between">
+		//- 			<a class="prev5"></a>
+		//- 			<div class="swiper-pagination sp5"></div>
+		//- 			<a class="next5"></a>
+		//- 		</div>
+		//- 		<div class="swiper5" id="swiper5">
+		//- 			<div class="swiper-wrapper">
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/1.jpg" class="gallery_slide" data-style="background: url('img/gallery/1.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/1.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/2.jpg" class="gallery_slide" data-style="background: url('img/gallery/2.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/2.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/3.jpg" class="gallery_slide" data-style="background: url('img/gallery/3.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/3.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/4.jpg" class="gallery_slide" data-style="background: url('img/gallery/4.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/4.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/5.jpg" class="gallery_slide" data-style="background: url('img/gallery/5.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/5.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/6.jpg" class="gallery_slide" data-style="background: url('img/gallery/6.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/6.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/7.jpg" class="gallery_slide" data-style="background: url('img/gallery/7.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/7.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/8.jpg" class="gallery_slide" data-style="background: url('img/gallery/8.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/8.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/9.jpg" class="gallery_slide" data-style="background: url('img/gallery/9.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/9.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/10.jpg" class="gallery_slide" data-style="background: url('img/gallery/10.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/10.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/11.jpg" class="gallery_slide" data-style="background: url('img/gallery/11.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/11.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/12.jpg" class="gallery_slide" data-style="background: url('img/gallery/12.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/12.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="img/gallery/big/13.jpg" class="gallery_slide" data-style="background: url('img/gallery/13.jpg') no-repeat;">
+		//- 						//- img(src="img/gallery/13.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 			</div>
+		//- 		</div>
+		//- 	</div>
+		//- 	<div id="gtab_2" class="gallery_slider" style="display: none">
+		//- 		<div class="ps_arrows flex align-items-center justify-content-between">
+		//- 			<a class="prev7"></a>
+		//- 			<div class="swiper-pagination sp7"></div>
+		//- 			<a class="next7"></a>
+		//- 		</div>
+		//- 		<div class="swiper7" id="swiper7">
+		//- 			<div class="swiper-wrapper">
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="https://player.vimeo.com/video/307084093?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb1.jpg') no-repeat center;">
+		//- 						//- img(src="img/thumb1.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="https://player.vimeo.com/video/307083213?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb2.jpg') no-repeat center;">
+		//- 						//- img(src="img/thumb2.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="https://player.vimeo.com/video/307086886?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb3.jpg') no-repeat center;">
+		//- 						//- img(src="img/thumb3.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="https://player.vimeo.com/video/307088149?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb4.jpg') no-repeat center;">
+		//- 						//- img(src="img/thumb4.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 				<div class="swiper-slide">
+		//- 					<a data-fancybox href="https://player.vimeo.com/video/308186072?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb5.jpg') no-repeat center;">
+		//- 						//- img(src="img/thumb5.jpg", alt="image")
+		//- 					</a>
+		//- 				</div>
+		//- 			</div>
+		//- 		</div>
+		//- 	</div>
+		//- </section>
 		// /gallery
 
 		// comments
-		section.comments
+		//- section.comments
 			h2.title-section Отзывы
 			.comments_slider
 				.slider-comments_btn.slider-comments_btn--prev
@@ -645,6 +708,101 @@ block content
 			.comments_img
 				img(src="img/flower-3.png", alt="image")
 		// /comments
+
+		// insta
+		//- section.insta
+			h2.title-section Наш инстаграм
+			.insta_adress
+				a(href="@imperiumclinic.ru" target="_blank")
+					span.insta_icon.insta_icon--small
+					span.insta_name @imperiumclinic.ru
+			.insta_row
+				.insta_col
+					.insta_item
+						.insta_block
+							.insta_img
+								img(src="img/insta-1.jpg", alt="image")
+						a(href="@imperiumclinic.ru" target="_blank").insta_over
+							span.insta_icon
+							span.insta_name.insta_name--item @imperiumclinic.ru
+				.insta_col
+					.insta_item
+						.insta_block
+							.insta_img
+								img(src="img/insta-1.jpg", alt="image")
+						a(href="@imperiumclinic.ru" target="_blank").insta_over
+							span.insta_icon
+							span.insta_name.insta_name--item @imperiumclinic.ru
+				.insta_col
+					.insta_item
+						.insta_block
+							.insta_img
+								img(src="img/insta-1.jpg", alt="image")
+						a(href="@imperiumclinic.ru" target="_blank").insta_over
+							span.insta_icon
+							span.insta_name.insta_name--item @imperiumclinic.ru
+				.insta_col
+					.insta_item
+						.insta_block
+							.insta_img
+								img(src="img/insta-1.jpg", alt="image")
+						a(href="@imperiumclinic.ru" target="_blank").insta_over
+							span.insta_icon
+							span.insta_name.insta_name--item @imperiumclinic.ru
+				.insta_col
+					.insta_item
+						.insta_block
+							.insta_img
+								img(src="img/insta-1.jpg", alt="image")
+						a(href="@imperiumclinic.ru" target="_blank").insta_over
+							span.insta_icon
+							span.insta_name.insta_name--item @imperiumclinic.ru
+
+			.contacts-footer
+				.contacts-footer_content
+					ul.contacts-footer_list
+						li.contacts-footer_item Телефон: 
+							img(src="img/contact-icon-1.png", alt="icon").contacts-footer_icon
+							span 
+								a(href="tel:+79688088804").contacts-footer_link +7(968) 808 88 04
+						li.contacts-footer_item Адрес: 
+							img(src="img/contact-icon-2.png", alt="icon").contacts-footer_icon
+							span ул. Земляной Вал, д. 38/40, корп. 6
+						li.contacts-footer_item Метро: 
+							img(src="img/contact-icon-3.png", alt="icon").contacts-footer_icon
+							span М.Курская/М.Чкаловская
+						li.contacts-footer_item Часы работы:
+							img(src="img/contact-icon-4.png", alt="icon").contacts-footer_icon
+							span С понедельника по воскресенье, 
+							span.center с 09:00 до 21:00
+				.contacts-footer_map#map
+		// /insta
+
+		// modal
+		//- .modal#modal-1
+			.modal_content
+				.modal_logo
+					img(src="img/logo-2.png", alt="logo")
+				form(action="#").modal_form
+					.modal_block
+						input(type="text", name="name" placeholder="Имя" required).modal_input
+						input(type="text", name="tel" placeholder="Телефон" required).modal_input
+					.modal_text нажимая на кнопку Вы соглашаетесь на обработку персональных данных
+					.modal_btn
+						button(type="submit") Заказать звонок
+					.modal_message
+					input(type="hidden", name="subject")
+				.modal_close
+		//- .modal_over
+
+		//- .modal#successModal
+			.modal_content
+				.modal_logo
+					img(src="img/logo-2.png", alt="logo")
+					| Отправлено
+				.modal_close
+		//- .modal_over
+		// /modal
 			
 		include blocks/footer.jade
 
@@ -653,7 +811,7 @@ block js
 	script(src="js/jquery.fancybox.min.js")
 	script(src="js/slick.min.js")
 	//- script(src="js/jquery.matchHeight-min.js")
-	//- script(src="js/jquery.inputmask.bundle.min.js")
+	script(src="js/jquery.inputmask.bundle.min.js")
 	//- script(src="js/jquery.tinyscrollbar.min.js")
 	//- script(src="js/autosize.min.js")
 	//- script(src="js/tooltipster.bundle.min.js")
@@ -662,4 +820,5 @@ block js
 	//- script(src="js/fullpage.min.js")
 	script(src="js/twinmax.min.js")
 	script(src="js/swiper.jquery.min.js")
+	script(src="https://api-maps.yandex.ru/2.1?apikey=8421d923-fd5b-45a6-b837-ce9772f5ae7c&lang=ru_RU")
 	script(src="js/script.js")

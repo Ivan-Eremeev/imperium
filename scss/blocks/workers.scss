@@ -1,0 +1,132 @@
+// workers
+.workers {
+	padding-bottom: 8em;
+	position: relative;
+	&_branch {
+		position: absolute;
+		top: 1em;
+		right: 0em;
+		z-index: 1;
+		img {
+			width: 23.5em;
+		}
+	}
+	&_slider {
+		padding: 3.5em 28em 1em 25em;
+		position: relative;
+	}
+	&_slider-container {
+		position: relative;
+		box-shadow: 0 0.438em 4.25em rgba(0, 0, 0, 0.14);
+	}
+}
+.slider-workers {
+	font-weight: 600;
+	&_btn {
+		width: 2.7em;
+		height: 2.7em;
+		background-color: #fff;
+		box-shadow: 0 0 0.375em 0.063em rgba(0, 0, 0, 0.11);
+		border-radius: 50%;
+		position: absolute;
+		top: 50%;
+		transform: translate(0,-50%);
+		cursor: pointer;
+		transition: .2s;
+		z-index: 2;
+		span {
+			position: absolute;
+			top: 0.27em;
+			left: 0.45em;
+			font-size: 1.6em;
+			cursor: pointer;
+		}
+		&--prev {
+			left: -4.5em;
+		}
+		&--next {
+			right: -4.5em;
+		}
+		&:hover {
+			background-color: $pink;
+			color: #fff;
+		}
+	}
+	&_slide {
+
+	}
+	&_block {
+		display: flex;
+	}
+	&_img {
+		img {
+			display: block;
+			width: 51.5em;
+		}
+	}
+	&_content {
+		padding: 1.5em 1em 1em 2.5em;
+		position: relative;
+	}
+	&_description {
+		font-size: 1em;
+		margin-bottom: 1em;
+		span {
+			display: block;
+			color: $blue;
+		}
+	}
+	&_name {
+		font-size: 1.4em;
+		font-weight: 600;
+		margin-bottom: 6em;
+	}
+	&_text {
+		font-size: 1em;
+		height: 2.7em;
+		margin-bottom: 3.4em;
+	}
+	&_sertificates {
+		text-align: center;
+		img {
+			display: inline-block;
+			width: 10.5em;
+			margin: 0 2em 0 0;
+		}
+	}
+	&_emblem {
+		position: absolute;
+		bottom: 0.4em;
+		right: 0.6em;
+	}
+	.slick-dots {
+		display: flex;
+		margin-left: auto;
+		margin-right: auto;
+		position: absolute;
+		left: 50%;
+		bottom: -3em;
+		transform: translate(-50%,0);
+		li {
+			margin: 0 0.4em;
+		}
+		button {
+			width: 8px;
+			height: 8px;
+			background-color: #E2E2F9;
+			border-radius: 50%;
+			font-size: 0;
+			border: none;
+			outline: none;
+		}
+		.slick-active {
+			button {
+				background-color: $pink;
+			}
+		}
+	}
+}
+.slick-slide {
+	outline: none;
+}
+// /workers

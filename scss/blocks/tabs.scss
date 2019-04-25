@@ -15,7 +15,9 @@
 	&_content {
 		div {
 			&.hide {
-				display: none;
+				@media (min-width: $break_sm + 1) {
+					display: none;
+				}
 			}
 		}
 	}
