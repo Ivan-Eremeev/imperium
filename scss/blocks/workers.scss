@@ -19,6 +19,20 @@
 		position: relative;
 		box-shadow: 0 0.438em 4.25em rgba(0, 0, 0, 0.14);
 	}
+	@media (max-width: $break_sm) {
+		padding: 1em 0;
+		box-shadow: 0 0.75rem 2.5rem 0.875rem rgba(0, 0, 0, 0.15);
+		&_branch {
+			display: none;
+		}
+		&_slider {
+			width: 100%;
+			padding: 0;
+		}
+		&_slider-container {
+			box-shadow: none;
+		}
+	}
 }
 .slider-workers {
 	font-weight: 600;
@@ -83,11 +97,14 @@
 	}
 	&_text {
 		font-size: 1em;
-		height: 2.7em;
-		margin-bottom: 3.4em;
+		margin-bottom: 1em;
 	}
 	&_sertificates {
+		margin-top: 3em;
 		text-align: center;
+		a {
+			display: inline-block;
+		}
 		img {
 			display: inline-block;
 			width: 10.5em;
@@ -122,6 +139,65 @@
 		.slick-active {
 			button {
 				background-color: $pink;
+			}
+		}
+	}
+	@media (max-width: $break_sm) {
+		&_block {
+			display: block;
+		}
+		&_img {
+			margin-top: 4em;
+			img {
+				margin-left: auto;
+				margin-right: auto;
+				width: 18em;
+				&.mobile-hide {
+					display: none;
+				}
+			}
+		}
+		&_content {
+			text-align: center;
+		}
+		&_description {
+			font-size: 1.1em;
+		}
+		&_name {
+			padding: 0 2em;
+			font-weight: bold;
+			font-size: 1.6em;
+			margin-bottom: 0.8em;
+		}
+		&_text {
+			padding: 0 1em;
+			font-size: 1.2em;
+			font-weight: normal;
+			margin-bottom: 0;
+		}
+		&_btn {
+			display: none;
+		}
+		&_emblem {
+			display: none;
+		}
+		&_sertificates {
+			margin-bottom: 2em;
+		}
+		.slick-dots {
+			bottom: 0.8em;
+			button {
+				width: 15px;
+				height: 15px;
+			}
+		}
+	}
+	@media (min-width: $break_sm + 1) {
+		&_img {
+			img {
+				&.mobile-visible {
+					display: none;
+				}
 			}
 		}
 	}

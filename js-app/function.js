@@ -19,7 +19,7 @@ $(document).ready(function () {
 	var	mediaXl = 1366,
 			mediaLg = 1200,
 			mediaMd = 1024,
-			mediaSm = 768,
+			mediaSm = 769,
 			mediaXs = 576;
 			
 

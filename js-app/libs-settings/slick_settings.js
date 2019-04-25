@@ -182,12 +182,8 @@ function sliderInitSet(slider) {
 };
 
 // Инициализация слайдеров
-sliderInitWorkers($('.slider-workers'));
-sliderInitPortfolio($('.slider-portfolio'), $('.slider-portfolio-for'));
-sliderInitComments($('.slider-comments'));
-
 function slidersResize() {
-  if (window.matchMedia("(max-width: 768px)").matches) {
+  if (window.matchMedia("(max-width: 769px)").matches) {
     $('.slick-initialized').slick('unslick');
     $('.slider-zone').each(function() {
       sliderInitMobile($(this));
@@ -195,12 +191,18 @@ function slidersResize() {
     sliderInitSelectzoneMobile($('#select-zone-trigger'), $('.select-zone_content'));
     sliderInitAdvantages($('.slider-adventages'));
     sliderInitSet($('.set_row'));
+    sliderInitWorkers($('.slider-workers'));
+    sliderInitPortfolio($('.slider-portfolio'), $('.slider-portfolio-for'));
+    sliderInitComments($('.slider-comments'));
   }
   else {
     $('.slick-initialized').slick('unslick');
     $('.slider-zone').each(function() {
       sliderInit($(this));
     });
+    sliderInitWorkers($('.slider-workers'));
+    sliderInitPortfolio($('.slider-portfolio'), $('.slider-portfolio-for'));
+    sliderInitComments($('.slider-comments'));
   }
 };
 slidersResize();
