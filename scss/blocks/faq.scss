@@ -53,5 +53,40 @@
 		text-transform: uppercase;
 		text-align: center;
 	}
+	@media (max-width: $break_sm) {
+		padding: 2.5em 0 7em 0;
+		overflow: hidden;
+		&_title {
+			font-size: 2em;
+		}
+		&_block {
+			width: 100%;
+		}
+		&_block-inner {
+			border: none;
+			padding: 0 1em;
+		}
+		&_img-1 {
+			width: 10em;
+			right: -3em;
+			bottom: -1em;
+		}
+		&_img-2 {
+			width: 7em;
+			top: -4em;
+		}
+		&_img-3 {
+			display: none;
+		}
+		&_img-4 {
+			width: 12em;
+			left: -3em;
+			bottom: -7em;
+		}
+		&_subblock {
+			padding: 0;
+			text-align: center;
+		}
+	}
 }
 // /faq

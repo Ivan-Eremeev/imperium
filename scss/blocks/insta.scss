@@ -76,6 +76,34 @@
 		text-align: center;
 		opacity: 0;
 	}
+	@media (max-width: $break_sm) {
+		background-color: #fff;
+		.title-section {
+			font-size: 3.1em;
+			margin-bottom: 0.6em;
+		}
+		&_adress {
+			margin-bottom: 2em;
+		}
+		&_row {
+			padding: 0;
+			margin-bottom: 3em;
+		}
+		&_img {
+			img {
+				width: 100%;
+			}
+		}
+		&_over {
+			padding: 0;
+			&:hover {
+				background-color: transparent;
+			}
+			span {
+				display: none;
+			}
+		}
+	}
 }
 .contacts-footer {
 	display: flex;
@@ -118,5 +146,89 @@
 		width: 61%;
 		box-shadow: 0 0 2.875rem rgba(0, 0, 0, 0.29);
 	}
+	@media (max-width: $break_sm) {
+			flex-wrap: wrap;
+			background-color: #fff;
+			margin: 1em;
+			box-shadow: 0 0 1.5rem 0.313rem rgba(255, 156, 199, 0.27);
+			border-radius: 2em;
+		&_content {
+			width: 100%;
+			order: 1;
+			padding: 3em 1.5em;
+		}
+		&_list {
+			padding-left: 3.4em;
+		}
+		&_item {
+			font-size: 1em;
+		}
+		&_map {
+			width: 100%;
+			height: 26em;
+			order: 0;
+		}
+	}
 }
 // /insta
+
+// footer
+.footer {
+	&_block {
+		padding: 1.3em 2em;
+	}
+	&_adress {
+		position: relative;
+		padding-left: 2.6em;
+		font-size: 1.3em;
+		margin-bottom: 1.7em;
+	}
+	&_phone {
+		padding-left: 1.6em;
+		position: relative;
+		font-size: 2em;
+		color: $black;
+		font-weight: 500;
+		.footer_icon {
+			width: 0.9em;
+		}
+	}
+	&_icon {
+		width: 1.1em;
+		position: absolute;
+		top: 50%;
+		left: 0;
+		transform: translate(0,-50%);
+	}
+	&_list {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 1em 0;
+	}
+	&_item {
+		width: 50%;
+		padding: 0 0 0 1em;
+		font-size: 0.83em;
+		position: relative;
+		&:nth-child(1) {
+			&:after {
+				content: '';
+				display: block;
+				height: 100%;
+				width: 0.15em;
+				background-color: #000;
+				position: absolute;
+				top: 0;
+				right: 0;
+			}
+		}
+	}
+	&_logo {
+		padding-left: 2.5em;
+		img {
+			width: 12.4em;
+		}
+	}
+}
+// /footer

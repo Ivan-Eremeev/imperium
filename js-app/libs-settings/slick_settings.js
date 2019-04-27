@@ -111,7 +111,8 @@ function sliderInitPortfolio(slider, sliderFor) {
   dots: false, // Пагинация
   arrows: false, // Стрелки
   fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
-  asNavFor: slider // Связь со слайдерами
+  asNavFor: slider, // Связь со слайдерами
+  swipe: false
 });
 
   slider.slick({
@@ -135,11 +136,61 @@ function sliderInitPortfolio(slider, sliderFor) {
   });
 };
 
+function sliderInitPortfolioMobile(slider, sliderFor) {
+  sliderFor.slick({
+  slidesToShow: 1, // Сколько слайдов показывать на экране
+  slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+  dots: false, // Пагинация
+  arrows: false, // Стрелки
+  fade: true, // Плавный переход (анимация исчезновения появления) В false будет листаться
+  asNavFor: slider, // Связь со слайдерами
+  swipe: false,
+});
+
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    asNavFor: sliderFor, // Связь со слайдерами
+    dots: false, // Пагинация
+    arrows: false, // Стрелки
+    // centerMode: true, // Задает класс .slick-center слайду в центре
+    focusOnSelect: true, // Выбрать слайд кликом
+    infinite: true, // Зацикленное пролистывание
+    // centerPadding: '33em', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+  });
+
+  // Кастомные кнопки "вперед" "назад"
+  $('.slider-portfolio_btn--prev span').click(function() {
+    slider.slick('slickPrev');
+  });
+  $('.slider-portfolio_btn--next span').click(function() {
+    slider.slick('slickNext');
+  });
+};
+
 function sliderInitComments(slider) {
   slider.slick({
     slidesToShow: 1, // Сколько слайдов показывать на экране
     slidesToScroll: 1, // Сколько слайдов пролистывать за раз
     dots: true, // Пагинация
+    arrows: false, // Стрелки
+    infinite: true, // Зацикленное пролистывание
+  });
+
+  // Кастомные кнопки "вперед" "назад"
+  $('.slider-comments_btn--prev').click(function() {
+    slider.slick('slickPrev');
+  });
+  $('.slider-comments_btn--next').click(function() {
+    slider.slick('slickNext');
+  });
+};
+
+function sliderInitCommentsMobile(slider) {
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: false, // Пагинация
     arrows: false, // Стрелки
     infinite: true, // Зацикленное пролистывание
   });
@@ -181,6 +232,18 @@ function sliderInitSet(slider) {
   });
 };
 
+function sliderInitInsta(slider) {
+  slider.slick({
+    slidesToShow: 1, // Сколько слайдов показывать на экране
+    slidesToScroll: 1, // Сколько слайдов пролистывать за раз
+    dots: false, // Пагинация
+    arrows: false, // Стрелки
+    infinite: true, // Зацикленное пролистывание
+    centerMode: true, // Задает класс .slick-center слайду в центре
+    centerPadding: '8em', // Отступы слева и справа чтоб увидеть часть крайних слайдов
+  });
+};
+
 // Инициализация слайдеров
 function slidersResize() {
   if (window.matchMedia("(max-width: 769px)").matches) {
@@ -192,8 +255,9 @@ function slidersResize() {
     sliderInitAdvantages($('.slider-adventages'));
     sliderInitSet($('.set_row'));
     sliderInitWorkers($('.slider-workers'));
-    sliderInitPortfolio($('.slider-portfolio'), $('.slider-portfolio-for'));
-    sliderInitComments($('.slider-comments'));
+    sliderInitPortfolioMobile($('.slider-portfolio'), $('.slider-portfolio-for'));
+    sliderInitCommentsMobile($('.slider-comments'));
+    sliderInitInsta($('.insta_row'));
   }
   else {
     $('.slick-initialized').slick('unslick');

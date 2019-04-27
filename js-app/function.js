@@ -9,6 +9,7 @@
 
 $(document).ready(function () {
 
+	// Подключение файлов в js (При использовании Gulp поменять "@prepros-prepend" на "//=")
 	// libs-settings/fancybox_settings.js
 	// libs-settings/mmenu_settings.js
 	// @prepros-prepend libs-settings/slick_settings.js
@@ -54,23 +55,25 @@ $(document).ready(function () {
 	// screenHeight();
 
 	// Scroll to ID // Плавный скролл к элементу при нажатии на ссылку. В ссылке указываем ID элемента
-	$('#scroll a[href^="#"]').click( function(){ 
+	$('a[href^="#"]').click( function(){ 
 		var scroll_el = $(this).attr('href'); 
 		if ($(scroll_el).length != 0) {
-		$('html, body').animate({ scrollTop: $(scroll_el).offset().top }, 500);
+		$('html, body').animate({ scrollTop: $(scroll_el).offset().top - 70}, 500);
+		$('a[href^="#"]').removeClass('active');
+		$(this).addClass('active');
 		}
 		return false;
 	});
 
 	// Stiky menu // Липкое меню. При прокрутке к элементу #header добавляется класс .stiky который и стилизуем
-	// var HeaderTop = $('#header').offset().top;
-	// $(window).scroll(function(){
-	// 	if( $(window).scrollTop() > HeaderTop ) {
-	// 		$('#header').addClass('stiky');
-	// 	} else {
-	// 		$('#header').removeClass('stiky');
-	// 	}
-	// });
+	var HeaderTop = $('#header').offset().top;
+	$(window).scroll(function(){
+		if( $(window).scrollTop() > HeaderTop ) {
+			$('#header').addClass('stiky');
+		} else {
+			$('#header').removeClass('stiky');
+		}
+	});
 
 	// Inputmask.js // Маска для поля ввода телефона
 	$('[name=tel]').inputmask("+7(999)999-99-99",{ showMaskOnHover: false });
@@ -315,18 +318,18 @@ $(document).ready(function () {
  //    menuItems = topMenu.find("a"),
  //    scrollItems = menuItems.map(function(){
  //      var item = $($(this).attr("href"));
- //      if (item.length) { return item; }
+ //      if (item.length && item) { return item; }
  //    });
 	// 	menuItems.click(function(e){
 	// 	  var href = $(this).attr("href"),
-	// 	      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight+1;
+	// 	      offsetTop = href === "#" ? 0 : $(href).offset().top-topMenuHeight + 1;
 	// 	  $('html, body').stop().animate({ 
 	// 	      scrollTop: offsetTop
 	// 	  }, 300);
 	// 	  e.preventDefault();
 	// 	});
 	// 	$(window).scroll(function(){
-	// 	  var fromTop = $(this).scrollTop()+topMenuHeight;
+	// 	  var fromTop = $(this).scrollTop()+topMenuHeight +100;
 	// 	  var cur = scrollItems.map(function(){
 	// 	    if ($(this).offset().top < fromTop)
 	// 	      return this;
@@ -497,57 +500,63 @@ $(document).ready(function () {
 	parallaxMove();
 
 	// Карта
-	// ymaps.ready(init);
-	// function init(){ 
-	// 	// Создание карты.    
-	// 	var myMap = new ymaps.Map("map", {
-	// 	// Координаты центра карты.
-	// 	// Порядок по умолчанию: «широта, долгота».
-	// 	// Чтобы не определять координаты центра карты вручную,
-	// 	// воспользуйтесь инструментом Определение координат.
-	// 		center: [55.755307068975505,37.65578650000002],
-	// 	// Уровень масштабирования. Допустимые значения:
-	// 	// от 0 (весь мир) до 19.
-	// 	zoom: 17,
-	// 	controls: ['typeSelector']
-	// 	}),
-	// 	MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
- //        '<div style="color: #2e2e2e; font-size: 1em; font-weight: bold; background: #fff; width: 8em; border-radius: 0.2em">$[properties.iconContent]<span style="display: block; color: #767676;">До 21:00</span></div>'
- //    ),
+	ymaps.ready(init);
+	function init(){ 
+		// Создание карты.    
+		var myMap = new ymaps.Map("map", {
+		// Координаты центра карты.
+		// Порядок по умолчанию: «широта, долгота».
+		// Чтобы не определять координаты центра карты вручную,
+		// воспользуйтесь инструментом Определение координат.
+			center: [55.755307068975505,37.65578650000002],
+		// Уровень масштабирования. Допустимые значения:
+		// от 0 (весь мир) до 19.
+		zoom: 17,
+		controls: ['typeSelector']
+		}),
+		MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+        '<div style="color: #2e2e2e; font-size: 1em; font-weight: bold; background: #fff; width: 8em; border-radius: 0.2em">$[properties.iconContent]<span style="display: block; color: #767676;">До 21:00</span></div>'
+    ),
 
- //    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
- //        iconContent: 'Imperiumclinic'
- //    }, {
- //        // Опции.
- //        // Необходимо указать данный тип макета.
- //        iconLayout: 'default#imageWithContent',
- //        // Своё изображение иконки метки.
- //        iconImageHref: 'img/point-map.png',
- //        // Размеры метки.
- //        iconImageSize: [45, 60],
- //        // Смещение левого верхнего угла иконки относительно
- //        // её "ножки" (точки привязки).
- //        iconImageOffset: [-25, -70],
- //        // Смещение слоя с содержимым относительно слоя с картинкой.
- //        iconContentOffset: [50, 10],
- //        // Макет содержимого.
- //        iconContentLayout: MyIconContentLayout
- //    });
- //    myMap.geoObjects
-	//     .add(myPlacemark);
-	// };
+    myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+        iconContent: 'Imperiumclinic'
+    }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/point-map.png',
+        // Размеры метки.
+        iconImageSize: [45, 60],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-25, -70],
+        // Смещение слоя с содержимым относительно слоя с картинкой.
+        iconContentOffset: [50, 10],
+        // Макет содержимого.
+        iconContentLayout: MyIconContentLayout
+    });
+    myMap.geoObjects
+	    .add(myPlacemark);
+	};
 
 	// formSubmit();
 
 	// Слежение за изменением размера окна браузера
+	var heightResized = false;
 	$(window).resize(function() {
+		var windowWidth = $(window).width();
+		if (heightResized == windowWidth) {
+			return;
+		}
+		heightResized = windowWidth;
 		fontResize(); // Резиновый сайт
 		// screenHeight(); // Блок с высотой окна браузера
 		// tooltipDisable(); // Отключение всплывающей подсказки
 		// countNumber(); // Анимация увеличения числа
 		slidersResize();
 	});
-	
+		
 });
 
 // Простая проверка форм на заполненность и отправка аяксом

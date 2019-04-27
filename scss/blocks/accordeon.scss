@@ -50,4 +50,19 @@
 			max-height: 100em;
 		}
 	}
+	@media (max-width: $break_sm) {
+		&_trigger {
+			padding: 0.5em 5em;
+			font-size: 1.2em;
+			&:after {
+				width: 1.5em;
+				height: 1.5em;
+			}
+		}
+		&_content {
+			max-height: 3.3em;
+			padding: 1em 3em 1em 3em;
+			font-size: 0.9em;
+		}
+	}
 }

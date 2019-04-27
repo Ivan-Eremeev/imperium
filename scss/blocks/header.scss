@@ -1,5 +1,7 @@
 // header
 .header {
+	z-index: 20;
+	background-color: #fff;
 	&_container {
 		display: flex;
 		justify-content: space-between;
@@ -14,6 +16,12 @@
 	}
 	@media (max-width: $break_sm) {
 		padding: 0em 1em;
+	}
+	&.stiky {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
 	}
 }
 .logo {

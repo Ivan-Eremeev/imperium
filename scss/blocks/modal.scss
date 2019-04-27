@@ -108,4 +108,23 @@
 			display: block;
 		}
 	}
+	@media (max-width: $break_sm) {
+		width: 27em;
+		&_logo {
+			img {
+				width: 15em;
+			}
+		}
+		&_input {
+			font-size: 1em;
+		}
+		&_text {
+			font-size: 0.6em;
+		}
+		&_btn {
+			button {
+				font-size: 1em;
+			}
+		}
+	}
 }

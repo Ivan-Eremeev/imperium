@@ -20,15 +20,15 @@
           </div>
           <button class="menu_btn hamburger hamburger--vortex" id="menu-btn" type="button"><span class="hamburger-box"><span class="hamburger-inner"></span></span></button>
           <nav class="menu_nav">
-            <ul class="menu_list">
+            <ul class="menu_list" id="menu_list">
               <li class="menu_item mobile-visible"><a class="logo" href="index.html"><img src="img/logo.png" alt="logo"></a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Главная</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Услуги</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Цены</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Акция</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Галерея</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Сотрудники</a></li>
-              <li class="menu_item"><a class="menu_link" href="#">Онлайн-запись</a></li>
+              <li class="menu_item"><a class="menu_link" href="https://imperiumclinic.ru/" target="_blank">Главная</a></li>
+              <li class="menu_item"><a class="menu_link" href="https://imperiumclinic.ru/epilation">Эпиляция</a></li>
+              <li class="menu_item"><a class="menu_link" href="#select-zone">Цены</a></li>
+              <li class="menu_item"><a class="menu_link" href="#prize">Акция</a></li>
+              <li class="menu_item"><a class="menu_link" href="#workers">Сотрудники</a></li>
+              <li class="menu_item"><a class="menu_link" href="#gallery">Галерея</a></li>
+              <li class="menu_item"><a class="menu_link" href="https://n164361.yclients.com/company:77426/idx:0/service" target="_blank">Онлайн-запись</a></li>
             </ul>
           </nav>
           <div class="menu_over"></div>
@@ -54,7 +54,7 @@
         <div class="first-screen_subtext first-screen_subtext--1" data-animate-xy="1">Работаем с любыми <br>типами кожи</div>
         <div class="first-screen_subtext first-screen_subtext--2" data-animate-xy="1">БЕЗБОЛЕЗНЕННО <br>И АККУРАТНО</div>
         <div class="first-screen_subtext first-screen_subtext--3" data-animate-xy="1">На лучшем аппарате <br>в стране</div>
-      </div><a class="arrow-next" href="#select-zone"><img src="img/arrow-next.png" alt="arrow"></a>
+      </div><a class="arrow-next scroll" href="#select-zone"><img src="img/arrow-next.png" alt="arrow"></a>
     </section>
     <!-- /first-screen-->
     <!-- select-zone-->
@@ -117,7 +117,8 @@
               </div>
               <div class="select-zone_arrow select-zone_arrow--next"><img src="img/white-arrow.png" alt="arrow"></div>
             </div>
-            <div class="select-zone_offer"><a class="select-zone_btn" href="#">ЗАПИСАТЬСЯ <span class="mobile-visible">со СКИДКОЙ 30%</span></a>
+            <div class="select-zone_offer">
+              <button class="modal-trigger select-zone_btn" data-modal="1">ЗАПИСАТЬСЯ <span class="mobile-visible">со СКИДКОЙ 30%</span></button>
               <div class="select-zone_sale mobile-hide">со СКИДКОЙ 30%</div>
             </div>
             <div class="zone-face mobile-hide">
@@ -172,7 +173,8 @@
               </div>
               <div class="select-zone_arrow select-zone_arrow--next"><img src="img/white-arrow.png" alt="arrow"></div>
             </div>
-            <div class="select-zone_offer"><a class="select-zone_btn" href="#">ЗАПИСАТЬСЯ <span class="mobile-visible">со СКИДКОЙ 30%</span></a>
+            <div class="select-zone_offer">
+              <button class="modal-trigger select-zone_btn" data-modal="1">ЗАПИСАТЬСЯ <span class="mobile-visible">со СКИДКОЙ 30%</span></button>
               <div class="select-zone_sale mobile-hide">со СКИДКОЙ 30%</div>
             </div>
           </div>
@@ -182,7 +184,7 @@
             </div>
             <div class="select-zone_slider">
               <div class="select-zone_arrow select-zone_arrow--prev"><img src="img/white-arrow.png" alt="arrow"></div>
-              <div class="slider-zone" id="slider-zone-3">
+              <div class="slider-zone slider-zone--men" id="slider-zone-3">
                 <div class="slider-zone_slide">
                   <ul class="slider-zone_list">
                     <li class="slider-zone_item">Подбородок<span>1.600</span></li>
@@ -228,7 +230,8 @@
               </div>
               <div class="select-zone_arrow select-zone_arrow--next"><img src="img/white-arrow.png" alt="arrow"></div>
             </div>
-            <div class="select-zone_offer"><a class="select-zone_btn select-zone_btn--men" href="#">ЗАПИСАТЬСЯ <span class="mobile-visible">со СКИДКОЙ 30%</span></a>
+            <div class="select-zone_offer">
+              <button class="modal-trigger select-zone_btn select-zone_btn--men" data-modal="1">ЗАПИСАТЬСЯ <span class="mobile-visible">со СКИДКОЙ 30%</span></button>
               <div class="select-zone_sale mobile-hide">со СКИДКОЙ 30%</div>
             </div>
           </div>
@@ -237,7 +240,7 @@
     </section>
     <!-- /select-zone-->
     <!-- advantages-->
-    <section class="advantages">
+    <section class="advantages" id="advantages">
       <div class="advantages_box">
         <div class="advantages_block">
           <div class="advantages_img"><img class="mobile-hide" src="img/advantages.png" alt="image"><img class="mobile-visible" src="img/advantages-mob.png" alt="image"></div>
@@ -277,7 +280,58 @@
                     <li class="slider-adventages_item">Педикюр</li>
                   </ul>
                   <div class="slider-adventages_icon"><img src="img/adventages-check.png" alt="icon"></div>
-                  <div class="slider-adventages_title">Дополнительные услуги</div>
+                  <div class="slider-adventages_title">Низкие цены</div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-adventages_slide">
+              <div class="slider-adventages_block">
+                <div class="slider-adventages_img"><img src="img/adventages-1.jpg" alt="image"></div>
+                <div class="slider-adventages_content">
+                  <div class="slider-adventages_text">Мы предоставляем большой выбор услуг по уходу за вашим телом!</div>
+                  <ul class="slider-adventages_list">
+                    <li class="slider-adventages_item">Косметологические услуги</li>
+                    <li class="slider-adventages_item">Массаж</li>
+                    <li class="slider-adventages_item">LPG-массаж</li>
+                    <li class="slider-adventages_item">Маникюр</li>
+                    <li class="slider-adventages_item">Педикюр</li>
+                  </ul>
+                  <div class="slider-adventages_icon"><img src="img/adventages-check.png" alt="icon"></div>
+                  <div class="slider-adventages_title">Удобное месторасположение</div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-adventages_slide">
+              <div class="slider-adventages_block">
+                <div class="slider-adventages_img"><img src="img/adventages-1.jpg" alt="image"></div>
+                <div class="slider-adventages_content">
+                  <div class="slider-adventages_text">Мы предоставляем большой выбор услуг по уходу за вашим телом!</div>
+                  <ul class="slider-adventages_list">
+                    <li class="slider-adventages_item">Косметологические услуги</li>
+                    <li class="slider-adventages_item">Массаж</li>
+                    <li class="slider-adventages_item">LPG-массаж</li>
+                    <li class="slider-adventages_item">Маникюр</li>
+                    <li class="slider-adventages_item">Педикюр</li>
+                  </ul>
+                  <div class="slider-adventages_icon"><img src="img/adventages-check.png" alt="icon"></div>
+                  <div class="slider-adventages_title">Новейшее оборудование</div>
+                </div>
+              </div>
+            </div>
+            <div class="slider-adventages_slide">
+              <div class="slider-adventages_block">
+                <div class="slider-adventages_img"><img src="img/adventages-1.jpg" alt="image"></div>
+                <div class="slider-adventages_content">
+                  <div class="slider-adventages_text">Мы предоставляем большой выбор услуг по уходу за вашим телом!</div>
+                  <ul class="slider-adventages_list">
+                    <li class="slider-adventages_item">Косметологические услуги</li>
+                    <li class="slider-adventages_item">Массаж</li>
+                    <li class="slider-adventages_item">LPG-массаж</li>
+                    <li class="slider-adventages_item">Маникюр</li>
+                    <li class="slider-adventages_item">Педикюр</li>
+                  </ul>
+                  <div class="slider-adventages_icon"><img src="img/adventages-check.png" alt="icon"></div>
+                  <div class="slider-adventages_title">Отличный сервис</div>
                 </div>
               </div>
             </div>
@@ -303,7 +357,7 @@
     </section>
     <!-- /advantages-->
     <!-- set-->
-    <section class="set">
+    <section class="set" id="set">
       <h2 class="title-section"><span>КОМБО </span>НАБОР</h2>
       <div class="set_sale">выгода 30%</div>
       <div class="set_row">
@@ -365,7 +419,7 @@
     </section>
     <!-- /set-->
     <!-- prize-->
-    <section class="prize">
+    <section class="prize" id="prize">
       <div class="prize_block">
         <div class="prize_content">
           <h2 class="prize_title">ЗАПИСЫВАЙСЯ НА ЭПИЛЯЦИЮ ЛЮБОЙ ЗОНЫ СО СКИДКОЙ </h2>
@@ -378,7 +432,7 @@
     </section>
     <!-- /prize-->
     <!-- workers-->
-    <section class="workers">
+    <section class="workers" id="workers">
       <h2 class="title-section">Наши сотрудники</h2>
       <div class="workers_branch"><img src="img/branch.png" alt="branch"></div>
       <div class="workers_slider">
@@ -418,18 +472,320 @@
     </section>
     <!-- /workers-->
     <!-- equipment-->
+    <section class="equipment" data-animate-wrap>
+      <h2 class="title-section">Наш аппарат</h2>
+      <div class="equipment_block">
+        <div class="equipment_name" data-animate-x="0.1">DILAS 808-M</div>
+        <div class="equipment_img" data-animate-x="0.1"><img src="img/equipment.png" alt="equipment"></div>
+        <div class="equipment_text equipment_text--1" data-animate-xy="1">Высокая мощность<span>получите длительный эффект всего за 5-7 процедур</span></div>
+        <div class="equipment_text equipment_text--2" data-animate-xy="1">Быстрый результат<span>Выпадение волос наступает уже на 10-ый день</span></div>
+        <div class="equipment_text equipment_text--3" data-animate-xy="1">Безопасность<span>Аппарат имеет все необходимые сертификаты и прошел проверку Роспотребнадзора</span></div>
+        <div class="equipment_text equipment_text--4" data-animate-xy="1">Подходит всем<span>Для любого цветотипа и волосков любой сложности</span></div>
+      </div>
+      <div class="equipment_flower mobile-visible"><img src="img/flower-4.png" alt="branch"></div>
+    </section>
     <!-- /equipment-->
     <!-- portfolio-->
+    <section class="portfolio">
+      <h2 class="portfolio_title mobile-visible">НАШИ РАБОТЫ</h2>
+      <div class="portfolio_img2"><img src="img/portfolio-2.png" alt="image"></div>
+      <div class="portfolio_slider">
+        <div class="slider-portfolio">
+          <div class="slider-portfolio_slide">
+            <div class="slider-portfolio_slide-block">
+              <input id="check-img-1" type="checkbox"><img src="img/portfolio/slide-1-prev.jpg" alt="image" data-time="prev"><img src="img/portfolio/slide-1-next.jpg" alt="image" data-time="next">
+              <label class="slider-portfolio_toggle" for="check-img-1"><span class="slider-portfolio_text">БЫЛО</span><span class="slider-portfolio_check"><span class="slider-portfolio_line"></span><span class="slider-portfolio_circle"></span></span><span class="slider-portfolio_text">СТАЛО</span></label>
+            </div>
+          </div>
+          <div class="slider-portfolio_slide">
+            <div class="slider-portfolio_slide-block">
+              <input id="check-img-2" type="checkbox"><img src="img/portfolio/slide-1-prev.jpg" alt="image" data-time="prev"><img src="img/portfolio/slide-1-next.jpg" alt="image" data-time="next">
+              <label class="slider-portfolio_toggle" for="check-img-2"><span class="slider-portfolio_text">БЫЛО</span><span class="slider-portfolio_check"><span class="slider-portfolio_line"></span><span class="slider-portfolio_circle"></span></span><span class="slider-portfolio_text">СТАЛО</span></label>
+            </div>
+          </div>
+          <div class="slider-portfolio_slide">
+            <div class="slider-portfolio_slide-block">
+              <input id="check-img-3" type="checkbox"><img src="img/portfolio/slide-1-prev.jpg" alt="image" data-time="prev"><img src="img/portfolio/slide-1-next.jpg" alt="image" data-time="next">
+              <label class="slider-portfolio_toggle" for="check-img-3"><span class="slider-portfolio_text">БЫЛО</span><span class="slider-portfolio_check"><span class="slider-portfolio_line"></span><span class="slider-portfolio_circle"></span></span><span class="slider-portfolio_text">СТАЛО</span></label>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio_content">
+        <div class="portfolio_slider-for">
+          <div class="slider-portfolio-for">
+            <div class="slider-portfolio-for_slide">01/3</div>
+            <div class="slider-portfolio-for_slide">02/3</div>
+            <div class="slider-portfolio-for_slide">03/3</div>
+          </div>
+        </div>
+        <h2 class="portfolio_title mobile-hide">НАШИ РАБОТЫ</h2>
+        <div class="portfolio_nav">
+          <div class="slider-portfolio_btn slider-portfolio_btn--prev"><span class="mobile-hide">&larr;</span><span><img class="mobile-visible" src="img/advantages-arrow.png" alt="arrow"></span></div>
+          <div class="slider-portfolio_btn slider-portfolio_btn--next"><span class="mobile-hide">&rarr;</span><span><img class="mobile-visible" src="img/advantages-arrow.png" alt="arrow"></span></div>
+        </div>
+        <div class="portfolio_img"><img src="img/portfolio-1.png" alt="image"></div>
+      </div>
+    </section>
     <!-- /portfolio-->
     <!-- faq-->
+    <section class="faq">
+      <h2 class="faq_title mobile-visible">ЧАСТЫЕ ВОПРОСЫ</h2>
+      <div class="faq_block"><img class="faq_img-1" src="img/flower-1.png" alt="flower"><img class="faq_img-2" src="img/flower-2.png" alt="flower"><img class="faq_img-3" src="img/branch-1.png" alt="branch"><img class="faq_img-4" src="img/gallery-model.png" alt="woomen">
+        <div class="faq_block-inner">
+          <div class="faq_subblock">
+            <h2 class="faq_title mobile-hide">ЧАСТЫЕ ВОПРОСЫ</h2>
+            <div class="accordeon">
+              <div class="accordeon_item">
+                <div class="accordeon_trigger">Как подготовиться к лазерной эпиляции?</div>
+                <div class="accordeon_content">Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+              </div>
+              <div class="accordeon_item">
+                <div class="accordeon_trigger">Как подготовиться к лазерной эпиляции?</div>
+                <div class="accordeon_content">Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+              </div>
+              <div class="accordeon_item">
+                <div class="accordeon_trigger">Как подготовиться к лазерной эпиляции?</div>
+                <div class="accordeon_content">Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+              </div>
+              <div class="accordeon_item">
+                <div class="accordeon_trigger">Как подготовиться к лазерной эпиляции?</div>
+                <div class="accordeon_content">Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+              </div>
+              <div class="accordeon_item">
+                <div class="accordeon_trigger">Как подготовиться к лазерной эпиляции?</div>
+                <div class="accordeon_content">Для подготовки к лазерной эпиляции требуется. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel consequatur, obcaecati repellendus laboriosam at quos, similique saepe hic vero fugit. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet quibusdam temporibus officia molestias assumenda, sint deserunt nemo quas dolores fuga maxime, soluta provident blanditiis magni ipsum totam expedita quasi ipsa.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
     <!-- /faq-->
-    <!-- gallery-->
+    <!-- gallery--><section class="screen_8" id="gallery">
+<div class="wrapper">
+<h2 class="title-section">Галерея</h2>
+<div class="galley_tabs flex align-items-center justify-content-center">
+<a data-target="gtab_1" class="active">Фото</a>
+<a data-target="gtab_2">Видео</a>
+</div>
+<div id="gtab_1" class="gallery_slider">
+<a class="prev5 mobile-visible"></a>
+<a class="next5 mobile-visible"></a>
+<div class="ps_arrows flex align-items-center justify-content-between">
+<a class="prev5 mobile-hide"></a>
+<div class="swiper-pagination sp5"></div>
+<a class="next5 mobile-hide"></a>
+</div>
+<div class="swiper5" id="swiper5">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/13.jpg" class="gallery_slide" data-style="background: url('img/gallery/13.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/2.jpg" class="gallery_slide" data-style="background: url('img/gallery/2.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/3.jpg" class="gallery_slide" data-style="background: url('img/gallery/3.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/4.jpg" class="gallery_slide" data-style="background: url('img/gallery/4.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/5.jpg" class="gallery_slide" data-style="background: url('img/gallery/5.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/6.jpg" class="gallery_slide" data-style="background: url('img/gallery/6.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/7.jpg" class="gallery_slide" data-style="background: url('img/gallery/7.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/8.jpg" class="gallery_slide" data-style="background: url('img/gallery/8.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/9.jpg" class="gallery_slide" data-style="background: url('img/gallery/9.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/10.jpg" class="gallery_slide" data-style="background: url('img/gallery/10.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/11.jpg" class="gallery_slide" data-style="background: url('img/gallery/11.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/12.jpg" class="gallery_slide" data-style="background: url('img/gallery/12.jpg') no-repeat;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="img/gallery/big/1.jpg" class="gallery_slide" data-style="background: url('img/gallery/1.jpg') no-repeat;">
+</a>
+</div>
+</div>
+</div>
+</div>
+<div id="gtab_2" class="gallery_slider" style="display: none">
+<a class="prev7 mobile-visible"></a>
+<a class="next7 mobile-visible"></a>
+<div class="ps_arrows flex align-items-center justify-content-between">
+<a class="prev7 mobile-hide"></a>
+<div class="swiper-pagination sp7"></div>
+<a class="next7 mobile-hide"></a>
+</div>
+<div class="swiper7" id="swiper7">
+<div class="swiper-wrapper">
+<div class="swiper-slide">
+<a data-fancybox href="https://player.vimeo.com/video/307084093?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb1.jpg') no-repeat center;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="https://player.vimeo.com/video/307083213?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb2.jpg') no-repeat center;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="https://player.vimeo.com/video/307086886?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb3.jpg') no-repeat center;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="https://player.vimeo.com/video/307088149?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb4.jpg') no-repeat center;">
+</a>
+</div>
+<div class="swiper-slide">
+<a data-fancybox href="https://player.vimeo.com/video/308186072?autoplay=1" class="gallery_slide" data-style="background: url('img/thumb5.jpg') no-repeat center;">
+</a>
+</div>
+</div>
+</div>
+</div>
+</section>
     <!-- /gallery-->
     <!-- comments-->
+    <section class="comments">
+      <h2 class="title-section">Отзывы</h2>
+      <div class="comments_slider">
+        <div class="slider-comments_btn slider-comments_btn--prev"><span class="mobile-hide">&larr;</span><img class="mobile-visible" src="img/advantages-arrow.png" alt="arrow"></div>
+        <div class="slider-comments">
+          <div class="slider-comments_slide">
+            <div class="slider-comments_img"><img src="img/comment-1.png" alt="image"></div>
+            <div class="slider-comments_title">“Забыла что такое брить ноги!”</div>
+            <p class="slider-comments_text">На самом деле все очень понравилось, начиная от сервиса и заканчиваю подходом специалиста  к процессу эпиляции. Сначала с ним проконсультировалась, специалист ответил на все вопросы.</p>
+            <div class="slider-comments_name">Мария Машенька</div>
+          </div>
+          <div class="slider-comments_slide">
+            <div class="slider-comments_img"><img src="img/comment-1.png" alt="image"></div>
+            <div class="slider-comments_title">“Забыла что такое брить ноги!”</div>
+            <p class="slider-comments_text">На самом деле все очень понравилось, начиная от сервиса и заканчиваю подходом специалиста  к процессу эпиляции. Сначала с ним проконсультировалась, специалист ответил на все вопросы.</p>
+            <div class="slider-comments_name">Мария Машенька</div>
+          </div>
+          <div class="slider-comments_slide">
+            <div class="slider-comments_img"><img src="img/comment-1.png" alt="image"></div>
+            <div class="slider-comments_title">“Забыла что такое брить ноги!”</div>
+            <p class="slider-comments_text">На самом деле все очень понравилось, начиная от сервиса и заканчиваю подходом специалиста  к процессу эпиляции. Сначала с ним проконсультировалась, специалист ответил на все вопросы.</p>
+            <div class="slider-comments_name">Мария Машенька</div>
+          </div>
+        </div>
+        <div class="slider-comments_btn slider-comments_btn--next"><span class="mobile-hide">&rarr;</span><img class="mobile-visible" src="img/advantages-arrow.png" alt="arrow"></div>
+      </div>
+      <div class="comments_img"><img src="img/flower-3.png" alt="image"></div>
+    </section>
     <!-- /comments-->
     <!-- insta-->
+    <section class="insta" id="insta">
+      <h2 class="title-section">Наш инстаграм</h2>
+      <div class="insta_adress"><a href="@imperiumclinic.ru" target="_blank"><span class="insta_icon insta_icon--small"></span><span class="insta_name">@imperiumclinic.ru</span></a></div>
+      <div class="insta_row">
+        <div class="insta_col">
+          <div class="insta_item">
+            <div class="insta_block">
+              <div class="insta_img"><img src="img/insta-1.jpg" alt="image"></div>
+            </div><a class="insta_over" href="https://www.instagram.com/imperiumclinic.ru/" target="_blank"><span class="insta_icon"></span><span class="insta_name insta_name--item">@imperiumclinic.ru</span></a>
+          </div>
+        </div>
+        <div class="insta_col">
+          <div class="insta_item">
+            <div class="insta_block">
+              <div class="insta_img"><img src="img/insta-1.jpg" alt="image"></div>
+            </div><a class="insta_over" href="https://www.instagram.com/imperiumclinic.ru/" target="_blank"><span class="insta_icon"></span><span class="insta_name insta_name--item">@imperiumclinic.ru</span></a>
+          </div>
+        </div>
+        <div class="insta_col">
+          <div class="insta_item">
+            <div class="insta_block">
+              <div class="insta_img"><img src="img/insta-1.jpg" alt="image"></div>
+            </div><a class="insta_over" href="https://www.instagram.com/imperiumclinic.ru/" target="_blank"><span class="insta_icon"></span><span class="insta_name insta_name--item">@imperiumclinic.ru</span></a>
+          </div>
+        </div>
+        <div class="insta_col">
+          <div class="insta_item">
+            <div class="insta_block">
+              <div class="insta_img"><img src="img/insta-1.jpg" alt="image"></div>
+            </div><a class="insta_over" href="https://www.instagram.com/imperiumclinic.ru/" target="_blank"><span class="insta_icon"></span><span class="insta_name insta_name--item">@imperiumclinic.ru</span></a>
+          </div>
+        </div>
+        <div class="insta_col">
+          <div class="insta_item">
+            <div class="insta_block">
+              <div class="insta_img"><img src="img/insta-1.jpg" alt="image"></div>
+            </div><a class="insta_over" href="https://www.instagram.com/imperiumclinic.ru/" target="_blank"><span class="insta_icon"></span><span class="insta_name insta_name--item">@imperiumclinic.ru</span></a>
+          </div>
+        </div>
+      </div>
+      <div class="contacts-footer">
+        <div class="contacts-footer_content">
+          <ul class="contacts-footer_list">
+            <li class="contacts-footer_item">Телефон: <img class="contacts-footer_icon" src="img/contact-icon-1.png" alt="icon"><span> <a class="contacts-footer_link" href="tel:+79688088804">+7(968) 808 88 04</a></span></li>
+            <li class="contacts-footer_item">Адрес: <img class="contacts-footer_icon" src="img/contact-icon-2.png" alt="icon"><span>ул. Земляной Вал, д. 38/40, корп. 6</span></li>
+            <li class="contacts-footer_item">Метро: <img class="contacts-footer_icon" src="img/contact-icon-3.png" alt="icon"><span>М.Курская/М.Чкаловская</span></li>
+            <li class="contacts-footer_item">Часы работы:<img class="contacts-footer_icon" src="img/contact-icon-4.png" alt="icon"><span>С понедельника по воскресенье, </span><span class="center">с 09:00 до 21:00</span></li>
+          </ul>
+        </div>
+        <div class="contacts-footer_map" id="map"></div>
+      </div>
+    </section>
     <!-- /insta-->
+    <!-- footer-->
+    <footer class="footer mobile-visible">
+      <div class="footer_block">
+        <div class="footer_adress">ул. Земляной Вал, д. 38/40, корп. 6<img class="footer_icon" src="img/contact-icon-2.png" alt="icon"></div><a class="footer_phone" href="tel:+79688088804">+7(968) 808 88 04<img class="footer_icon" src="img/contact-icon-1.png" alt="icon"></a>
+      </div>
+      <ul class="footer_list">
+        <li class="footer_item">
+          <div class="footer_logo"><img src="img/logo-footer.png" alt="logo"></div>
+        </li>
+        <li class="footer_item"> <span>Клиника Эстетической Медицины </span><span>Студия лазерной эпиляции </span></li>
+      </ul>
+    </footer>
+    <!-- /footer-->
     <!-- modal-->
+    <div class="modal" id="modal-1">
+      <div class="modal_content">
+        <div class="modal_logo"><img src="img/logo-2.png" alt="logo"></div>
+        <form class="modal_form" action="#">
+          <div class="modal_block">
+            <input class="modal_input" type="text" name="name" placeholder="Имя" required>
+            <input class="modal_input" type="text" name="tel" placeholder="Телефон" required>
+          </div>
+          <div class="modal_text">нажимая на кнопку Вы соглашаетесь на обработку персональных данных</div>
+          <div class="modal_btn">
+            <button type="submit">Заказать звонок</button>
+          </div>
+          <div class="modal_message"></div>
+          <input type="hidden" name="subject">
+        </form>
+        <div class="modal_close"></div>
+      </div>
+    </div>
+    <div class="modal_over"></div>
     <!-- /modal-->
     <!-- footer-->
     <footer class="footer"> 
