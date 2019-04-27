@@ -73,9 +73,10 @@
 		display: flex;
 	}
 	&_img {
+		flex-shrink: 0;
 		img {
 			display: block;
-			width: 51.5em;
+			min-height: 100%;
 		}
 	}
 	&_content {

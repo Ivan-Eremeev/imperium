@@ -93,6 +93,7 @@ function sliderInitWorkers(slider) {
     dots: true, // Пагинация
     arrows: false, // Стрелки
     infinite: false, // Зацикленное пролистывание
+    adaptiveHeight: true, // Подгоняет высоту слайдера под элемент слайда
   });
 
   // Кастомные кнопки "вперед" "назад"
