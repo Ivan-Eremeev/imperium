@@ -190,7 +190,8 @@
 
 	}
 	&_block {
-		padding-bottom: 3em;
+		padding-bottom: 7em;
+		position: relative;
 	}
 	&_img {
 		margin-bottom: 2em;
@@ -217,6 +218,11 @@
 	}
 	&_icon {
 		margin-top: -1em;
+		position: absolute;
+		left: 0;
+		bottom: 5em;
+		width: 100%;
+		text-align: center;
 		img {
 			display: inline-block;
 			width: 2.7em;
@@ -226,6 +232,10 @@
 		font-size: 1.1em;
 		font-weight: 600;
 		color: $pink;
+		position: absolute;
+		width: 100%;
+		left: 0;
+		bottom: 3.5em;
 	}
 	&_btn {
 		position: absolute;
@@ -267,6 +277,14 @@
 		.slick-active {
 			button {
 				background-color: #E296BF;
+			}
+		}
+	}
+	@media (max-width: $break_xs) {
+		.slick-dots {
+			button {
+				width: 8px;
+				height: 8px;
 			}
 		}
 	}

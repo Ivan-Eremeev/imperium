@@ -188,5 +188,13 @@
 			}
 		}
 	}
+	@media (max-width: $break_xs) {
+		.slick-dots {
+			button {
+				width: 8px;
+				height: 8px;
+			}
+		}
+	}
 }
 // /set
